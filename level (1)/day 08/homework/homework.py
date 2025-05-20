@@ -29,11 +29,9 @@ while user_password != "python123":
 # 5)მომხმარებელმა უნდა შეიყვანოს რიცხვი n. პროგრამამ while ციკლით უნდა დაითვალოს 1-დან n-მდე რიცხვების ჯამი
 
 n=int(input("enter your number "))
-m=1
-b=0
-while m <= n:
-    b=b+m
-    m=m+1
-
-    print(m)
-    print(n)
+p=1
+x=0
+while p <= n:
+    x += p
+    p += 1
+print(x)
