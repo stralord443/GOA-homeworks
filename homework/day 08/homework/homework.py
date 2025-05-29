@@ -1,37 +1,27 @@
-# 1)დაწერე პროგრამა, რომელიც while ციკლით დაბეჭდავს რიცხვებს 1-დან 10-მდე.
 
-U=1
-while U >=1 and U <= 10 :
-    print(U)
-    U=U+1
-    
-    
-# 2)დაწერე პროგრამა, რომელიც დაბეჭდავს რიცხვებს 10-დან 1-მდე
+# 1)დავალება: გამოიყენე for ციკლი, რომ დაბეჭდო რიცხვები 1-დან 10-მდე.
 
-I=10
-while I >=1 and I <= 10 :
-    print(I)
-    I=I-1
+for I in range (1,11,1):
+    print (I)
 
-# 3)კომენტარებით ახსენი while loop.
-# while loop is an operatino in which we choose what will come out if statement is true (it will loop itself)
 
-# 4)დაწერე პროგრამა, რომელიც სთხოვს მომხმარებელს პაროლის შეყვანას.
-#  სწორი პაროლია "python123". სანამ სწორად არ შეიყვანს, მოთხოვე თავიდან
+# 2)დაბეჭდე სიტყვა "Hello world" ხუთჯერ, ყოველი დაბეჭდვა ახალ ხაზზე.
 
-password=("python123")
+for I in range (1,6,1):
+    print ("Hello world")
 
-user_password=input("enter password ")
 
-while user_password != "python123":
-    user_password=input("enter right password ")
 
-# 5)მომხმარებელმა უნდა შეიყვანოს რიცხვი n. პროგრამამ while ციკლით უნდა დაითვალოს 1-დან n-მდე რიცხვების ჯამი
+# 3) გამოიყენე for ციკლი, რომ დაბეჭდო მხოლოდ ლუწი რიცხვები  10.
 
-n=int(input("enter your number "))
-p=1
-x=0
-while p <= n:
-    x += p
-    p += 1
-print(x)
+for I in range (0, 11, 2):
+    print (I)
+
+
+# 4)უყურეთ ჩანაწერს
+
+# done 
+
+# 5)და კომენტარებით ახსენი რა არის for loop 
+
+# for loop is similar to while loop but it is more comfortable to be used in lorger, bigger codes

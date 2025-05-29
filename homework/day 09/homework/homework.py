@@ -1,27 +1,28 @@
-
-# 1)დავალება: გამოიყენე for ციკლი, რომ დაბეჭდო რიცხვები 1-დან 10-მდე.
-
-for I in range (1,11,1):
-    print (I)
+# 2. ახსენით რა განსხვავებაა implicit და explicit datatype comversion-ში.
 
 
-# 2)დაბეჭდე სიტყვა "Hello world" ხუთჯერ, ყოველი დაბეჭდვა ახალ ხაზზე.
+# implicit datatype conversion არის კომპიუტერის მიერ გარდაქმნილი დათა თაიპი, მაგალითად გამრავლებისას int + int მივიღებთ float-ს
 
-for I in range (1,6,1):
-    print ("Hello world")
-
+# expelicit datatipe conversion არის ადამიანის მიერ გარდაქმნილი დათა თაიპი, მაგალითად int დათა თაიპის str ტიპად გარდაქმნა
 
 
-# 3) გამოიყენე for ციკლი, რომ დაბეჭდო მხოლოდ ლუწი რიცხვები  10.
+# 3. წაიკითხეთ დამატებითი მასალა: https://www.geeksforgeeks.org/type-casting-in-python/
 
-for I in range (0, 11, 2):
-    print (I)
+#done
 
 
-# 4)უყურეთ ჩანაწერს
+# 4. შექმენით პროგრამა რომელიც მიიღებს მომხარებლისგან input-ს რიხვის სახით და დაბეჭდეთ ამ რიცხვამდე ყველა რიცხვი თანმიმდევრობით. (For loop)
 
-# done 
+X=int(input("enter a number "))
 
-# 5)და კომენტარებით ახსენი რა არის for loop 
+for I in range (X):
+    print(I)
 
-# for loop is similar to while loop but it is more comfortable to be used in lorger, bigger codes
+# 5. გაალეთეთ მეოთხე დავალება While loop-ის გამოყენებით.
+
+P=int(input("enter a number "))
+Z=1
+
+while Z < P:
+    print(Z)
+    Z += 1
