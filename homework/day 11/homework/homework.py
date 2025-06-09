@@ -56,11 +56,23 @@ if (num_1 < 0 and num_2 < 0) and y < 2:
 # დაბეჭდე შედეგი შესაბამისი მოქმედებით.
 # თუ ოპერაცია არასწორია (მაგ 0-ს გაყოფა ან ტექსტი ან უცხო სიმბოლო) → "არასწორი ოპერაცია!"
 
+number1 = int(input("seiyvane ricxvi"))
+number2 = int(input("seiyvane meore ricxvi"))
+operacia = input("seiyvane sxva operaciebi rogoricaa: (+, -, , /)")
 
-
-
-
-
+if operacia == "+":
+    print(number1 + number2)
+elif operacia == "-":
+    print(number1 - number2)
+elif operacia == "":
+    print(number1 * number2)
+elif operacia == "/":
+    if number2  != 0:
+        print(number1 / number2)
+    else:
+        print("araa swori")
+else:
+    print("araa zma swori")
 
 # 5) შეამოწმეთ რესურსებში ჩაგდებული სურათი და მის მიხედვით დაწერეთ კომენტარებად ან პრეზენტაციაში მოქმედედების
 #  თანმიმდევრობა და საბოლოო პასუხი, ასევე როგორც ნამდვილი პითონის კოდი (შექმენით a,b,c ცვლადები,
