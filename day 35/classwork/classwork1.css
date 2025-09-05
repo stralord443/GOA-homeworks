@@ -1,0 +1,17 @@
+/* h1 იყოს წითელი და შუაში (center)
+p იყოს ნაცრისფერი და ოდნავ დიდი (font-size: 18px)
+button ჰქონდეს ლურჯი ფონი, თეთრი ტექსტი და მომრგვალებული კუთხეები (border-radius) */
+
+.but{
+    background-color: blue;
+    color: white;
+    border-radius: 3px;
+}
+.h1{
+    color: red;
+    text-align: center;
+}
+.p{
+    color: grey;
+    font-size: 18px;
+}
