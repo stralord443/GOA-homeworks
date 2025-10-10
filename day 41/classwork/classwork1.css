@@ -1,0 +1,17 @@
+.cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 400px;
+    width: 100%;
+    background-color: blue;
+}
+.div1{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    gap: 20px;
+    
+}

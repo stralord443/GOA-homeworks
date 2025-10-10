@@ -1,0 +1,37 @@
+<!-- 2) ახსენით overflow2) ახსენით overflow -->
+
+<!-- with overflow we can control what will happen to information inside our tag that is too big for our tag -->
+
+<!-- 3) შექმენი div ბლოკი, რომელშიც იქნება ერთი დიდი ფოტო თქვენი დავალებაა მოაჭრათ ზედმეტი ნაწილი -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            height: 200px;
+            width: 200px;
+            overflow: hidden;
+        }
+        .div2{
+            height: 200px;
+            width: 200px;
+            overflow: scroll;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 3) შექმენი div ბლოკი, რომელშიც იქნება ერთი დიდი ფოტო თქვენი დავალებაა მოაჭრათ ზედმეტი ნაწილი -->
+    <div class="div1">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.7Z-1-9bekXNZKY7Hw9DvEgHaD4?pid=Api&P=0&h=220" alt="">
+    </div>
+    <!-- 4)  შექმენით დივი სადაც იქნება ერთ იდივი რომელიც გადასული იქნება ზღვარს, თქვენი დავალებაა გადასულ ნაწილზე გააკეთოთ scrollbar -->
+    <div class="div2">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.7Z-1-9bekXNZKY7Hw9DvEgHaD4?pid=Api&P=0&h=220" alt="">
+    </div>
+</body>
+</html>

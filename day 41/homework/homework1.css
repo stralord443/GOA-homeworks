@@ -1,0 +1,20 @@
+.div1{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    position: static;
+}
+.div2{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: relative;
+    left: 30px;
+    bottom: 20px;
+}
+.div3{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    position: static;
+}

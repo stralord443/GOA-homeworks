@@ -1,0 +1,18 @@
+.cont{
+    background-color: blue;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+
+    gap: 20px;
+}
+.div1{
+    display: inline;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;    
+}
