@@ -1,0 +1,13 @@
+/* 6) შექმენი ბლოკი, რომელიც hover-ზე ტრიალდება მარცხნივ და მარჯვნივ გამოიყენე transform: rotate(45deg);
+ დაამატე transform-origin: top left; რომ ბრუნვა ზედა მარცხენა კუთხიდან დაიწყოს. დაამატე transition, რომ ბრუნვა იყოს ნელი და რბილი  */
+.div1{
+    height: 200px;
+    width: 200px;
+    background-color: aquamarine;
+    transform-origin: top left;
+    transition: ease;
+}
+.div1:hover{
+    transform: rotate(45deg);
+    transition:2s;
+}

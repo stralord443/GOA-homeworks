@@ -1,0 +1,16 @@
+/* 2) ელემენტს შეეცვალოს ფონი თანდათან: წითელი → ყვითელი → მწვანე → ლურჯი → ისევ წითელი (უსასრულოდ). */
+
+.div1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: Myanim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes Myanim{
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}

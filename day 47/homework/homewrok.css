@@ -1,0 +1,39 @@
+.div1{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    transform: translate(100px,200px);
+    
+}
+.div2{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    transform: translateX(400px);
+}
+.div3{
+    background-color: brown;
+    width: 100px;
+    height: 100px;
+    transform: translate(700px,200px)scale(4);
+}
+.div4{
+    background-color: greenyellow;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-50deg)translateX(400px);
+}
+.div5{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    transform: rotate(100deg);
+}
+ /* შემქენი დივი, ეს დივი გადაიტანე 50px-ით ჰორიზონტალურად და 100px-ით ვერტიკალურად,
+    შემდეგ ამ დივს შაუცვალე ზომა და გაზარდე 3 ჯერ და ამატრიალე 120 გრადუსით. */ 
+.div6{
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    transform: translate(50px,100px)scale(3)rotate(120deg);
+}

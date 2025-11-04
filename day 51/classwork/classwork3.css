@@ -1,0 +1,14 @@
+/* 5) ანიმაცია შესრულდეს 2-ჯერ, დივი ზომაში იზრდებოდეს და მცირდებდეს */
+
+.div1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: Myanim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes Myanim{
+  0%   {transform:scale(0.5);}
+  100% {transform: scale(2);}
+}

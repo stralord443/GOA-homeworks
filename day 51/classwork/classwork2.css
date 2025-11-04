@@ -1,0 +1,13 @@
+/* 4) როცა საიტი ჩაიტვირთება ელემენტი იყოს გამქრალი და "გჩნდეს" */
+
+.div1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: Myanim;
+    animation-iteration-count: infinite;
+}
+@keyframes Myanim{
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}

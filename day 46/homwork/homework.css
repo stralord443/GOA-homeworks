@@ -1,0 +1,41 @@
+.div1{
+    overflow: visible;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+.div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.div2{
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+.div3{
+    overflow: scroll;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+.div4{
+    overflow: auto;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+.div5{
+    overflow-x: visible;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+.div6{
+    overflow-y: hidden;
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}

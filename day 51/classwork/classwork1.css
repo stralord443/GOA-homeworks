@@ -1,0 +1,16 @@
+/* 3) შექმენით ერთი დივი, ამ დივმა მთლიან ეკრანზე უნდა იმოძრაოს (უსასრულოდ) */
+
+.div1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: Myanim;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes Myanim{
+  0%   {transform: translate(100px,0px);}
+  25%  {transform: translate(0px,100px);}
+  50%  {transform: translate(-100px,0px);}
+  100% {transform: translate(0px,-100px);}
+}

@@ -1,0 +1,45 @@
+.con1{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    transform: skew(10deg,10deg);
+}
+.div1{
+    height: 200px;
+    width: 300px;
+    background-color: aqua;
+}
+.div2{
+    height: 100px;
+    width: 300px;
+    background-color: aquamarine;
+}
+.con2{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    transform: translate(80px,50px);
+}
+.con3{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    transform: rotate(20deg)translate(200px,-600px);
+}
+.con4{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    transform: scale(1.4) translate(600px,-400px);
+}
+.con5{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    transform: translate(700px,-1200px)rotate(40deg);
+    transition: all 2s
+}
+.div5:hover{
+    width: 200px;
+}
+

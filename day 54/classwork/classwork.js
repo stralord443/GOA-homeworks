@@ -1,0 +1,46 @@
+// 1) დაწერე კოდი რომელიც იღებს რიცხვს 1–დან 12-მდე და აბრუნებს შესაბამისი თვის სახელს.
+// თუ სხვა რიცხვია, დაბეჭდოს "Invalid month". (გამოიყენე switch)
+
+let month = parseInt(prompt("შეიყვანე თვის ნომერი (1-12):"));
+
+switch (month) {
+    case 1:
+        console.log("იანვარი");
+        break;
+    case 2:
+        console.log("თებერვალი");
+        break;
+    case 3:
+        console.log("მარტი");
+        break;
+    case 4:
+        console.log("აპრილი");
+        break;
+    case 5:
+        console.log("მაისი");
+        break;
+    case 6:
+        console.log("ივნისი");
+        break;
+    case 7:
+        console.log("ივლისი");
+        break;
+    case 8:
+        console.log("აგვისტო");
+        break;
+    case 9:
+        console.log("სექტემბერი");
+        break;
+    case 10:
+        console.log("ოქტომბერი");
+        break;
+    case 11:
+        console.log("ნოემბერი");
+        break;
+    case 12:
+        console.log("დეკემბერი");
+        break;
+    default:
+        console.log("Invalid month");
+        break;
+}
