@@ -1,0 +1,39 @@
+<!-- 6) შექმენი სია (li) და ::before-ით ჩაანაცვლე სტანდარტული bullet-ები შენი სიმბოლოთი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: green;
+        font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>2</li>
+    </ul>
+</body>
+</html>

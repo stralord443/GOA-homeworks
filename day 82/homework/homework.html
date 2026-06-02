@@ -1,0 +1,49 @@
+<!-- 1)  შექმენი ბარათი, რომელიც hover-ზე გაიზრდება, ოდნავ აიწევს ზემოთ და ნელა დატრიალდება 5 გრადუსით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        background: #f4f6f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: sans-serif;
+    }
+
+    .card {
+        width: 250px;
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.05) rotate(5deg);
+    }
+
+    .card h3 {
+        margin: 0 0 10px;
+    }
+
+    .card p {
+        margin: 0;
+        color: #555;
+    }
+</style>
+</head>
+<body>
+    <div class="card">
+        <h3>ბარათის სათაური</h3>
+        <p>ეს ბარათი hover-ზე გაიზრდება, აიწევს და დატრიალდება.</p>
+    </div>
+</body>
+</html>

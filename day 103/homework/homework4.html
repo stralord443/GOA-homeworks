@@ -1,0 +1,39 @@
+<!-- 5) შექმენი კლასი Shape, რომელსაც ექნება color. შექმენი კლასი Rectangle, რომელიც extends Shape-ს.
+გამოიყენე super და დაამატე width და height. შექმენი მეთოდი getArea(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Shape {
+            constructor(color) {
+            this.color = color
+        }
+    }
+
+    class Rectangle extends Shape {
+        constructor(color, width, height) {
+        super(color)
+
+        this.width = width
+        this.height = height
+    }
+
+    getArea() {
+        return this.width * this.height
+    }
+}
+
+    const rect1 = new Rectangle("red", 10, 5)
+
+    console.log(rect1)
+
+    console.log(rect1.getArea())
+    </script>
+</body>
+</html>

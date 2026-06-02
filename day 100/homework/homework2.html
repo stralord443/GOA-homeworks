@@ -1,0 +1,90 @@
+<!-- 3.შექმენი თამაში სადაც მომხმარებელს აქვს 4 წამი და ამ დროში ეკრანზე ჩნდება random ადგილას პატარა ღილაკი,
+მომხმარებელმა უნდა დააჭიროს რაც შეიძლება ბევრჯერ, ბოლოს გამოიტანე მაქსიმალური დაჭერის რაოდენობა -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen flex flex-col items-center justify-center bg-gray-100 overflow-hidden">
+
+    <h1 class="text-3xl font-bold mb-4">Click Speed Game</h1>
+
+    <button id="startBtn" class="px-6 py-3 bg-blue-500 text-white rounded-xl mt-10 hover:bg-blue-600">Start</button>
+
+    <div id="gameArea" class="relative w-full h-full"></div>
+
+    <p id="timer" class="absolute top-12 text-xl font-semibold"></p>
+    <p id="result" class="absolute bottom-10 text-lg font-bold"></p>
+
+<script>
+    const startBtn = document.getElementById("startBtn")
+    const gameArea = document.getElementById("gameArea")
+    const result = document.getElementById("result")
+    const timerText = document.getElementById("timer")
+
+    let score = 0;
+    let gameTime = 4;
+    let gameInterval;
+    let countdown;
+    let active = false;
+
+    function spawnButton() {
+        const btn = document.createElement("button")
+
+        let size = 40
+        let x = Math.random() * (window.innerWidth - size)
+        let y = Math.random() * (window.innerHeight - size)
+
+        btn.style.position = "absolute"
+        btn.style.left = x + "px"
+        btn.style.top = y + "px"
+
+        btn.className = "w-10 h-10 bg-red-500 rounded-full"
+
+        gameArea.appendChild(btn)
+
+        btn.addEventListener("click", () => {
+            if (!active) return
+            score++
+            btn.remove()
+            spawnButton() // ახალი ღილაკი
+        })
+    }
+
+    startBtn.addEventListener("click", () => {
+        score = 0
+        result.textContent = ""
+        startBtn.classList.add("hidden")
+        active = true
+
+        spawnButton()
+
+    // countdown
+    let timeLeft = gameTime
+    timerText.textContent = "დრო: " + timeLeft
+
+    countdown = setInterval(() => {
+        timeLeft--
+        timerText.textContent = "დრო: " + timeLeft
+
+        if (timeLeft <= 0) {
+            endGame()
+        }
+    }, 1000)
+})
+
+    function endGame() {
+        active = false
+        clearInterval(countdown)
+        gameArea.innerHTML = ""
+        result.textContent = "შენი შედეგი: " + score + " დაჭერა"
+        startBtn.classList.remove("hidden")
+    }
+</script>
+</body>
+</html>

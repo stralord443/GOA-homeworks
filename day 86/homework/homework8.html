@@ -1,0 +1,31 @@
+<!-- 9) შექმენი ბარათების grid, სადაც თითოეულ ბარათს აქვს rounded ზედა კუთხეები,
+  shadow და hover-ზე ჩრდილის გაზრდა transition-ით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-100 p-6">
+
+  <div class="max-w-6xl mx-auto grid grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-t-2xl shadow-md hover:shadow-2xl duration-300">
+      <div class="p-5">
+        <h3 class="text-lg font-semibold mb-2">Card Title</h3>
+        <p class="text-gray-600 text-sm">Simple card with rounded top corners and hover shadow effect.</p>
+      </div>
+
+    </div>
+    <div class="bg-white rounded-t-2xl shadow-md hover:shadow-2xl transition-shadow duration-300">
+      <div class="p-5">
+        <h3 class="text-lg font-semibold mb-2">Card Title</h3>
+        <p class="text-gray-600 text-sm">Smooth transition makes the shadow increase on hover.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

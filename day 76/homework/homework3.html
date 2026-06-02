@@ -1,0 +1,35 @@
+<!-- 4) შერეული – მრავალკუთხა + ცვლადი
+პირობა:
+შექმენით ყუთი (div) ზომით 250px x 250px.
+გამოიყენეთ ცვლადი --main-color ფონისთვის
+გამოიყენეთ clip-path, რომ ყუთი იყოს მრავალკუთხა (polygon) ფორმის
+ცვლადის შეცვლისას ყუთის ფერი ავტომატურად შეიცვლება -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --main-color:aqua;        
+        }
+        .div1{
+            height: 250px;
+            width: 250px;
+            background-color: var(--main-color);
+            clip-path: polygon(
+                50% 0%,
+                0% 40%,
+                20% 100%,
+                80% 100%,
+                100% 40%
+                );
+            }
+    </style>
+</head>
+<body>
+    <div class="div1">1</div>
+</body>
+</html>

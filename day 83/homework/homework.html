@@ -1,0 +1,40 @@
+<!-- 1) კომენტარების სახით ახსენი Destructuring -->
+
+<!-- Destructuring let's us get access to variables containance -->
+
+
+<!-- 2) მოცემულია ობიექტი:
+{
+  username: "admin",
+  password: "1234",
+  role: "user"
+}
+დესტრუქტურინგის გამოყენებით:
+username გადაარქვი user
+role-ს გაუწერე default მნიშვნელობა "guest" (თუ არ არსებობს) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let list ={
+    username: "admin",
+    password: "1234",
+    role: "user"
+    }
+
+    let {username: user , password, role="guest"} = list
+
+    console.log(user)
+    console.log(password)
+    console.log(role)
+    </script>
+</body>
+</html>

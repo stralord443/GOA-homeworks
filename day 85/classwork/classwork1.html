@@ -1,0 +1,37 @@
+<!-- 2) მოცემულია ობიექტი:
+const user = {
+username: "gio123",
+email: "gio@gmail.com",
+address: {
+city: "Batumi",
+zip: "6000"}}
+Nested destructuring-ის გამოყენებით:username გადაარქვით userName
+address-იდან პირდაპირ აიღეთ city და zip ცვლადებში
+დაბეჭდეთ ყველა მიღებული ცვლადი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    const user = {
+        username: "gio123",
+        email: "gio@gmail.com",
+        address: {
+        city: "Batumi",
+        zip: "6000"
+    }}
+
+    let {username: userName, address:{city,zip}} = user
+
+    console.log(userName)
+    console.log(city)
+    console.log(zip)
+    </script>
+</body>
+</html>

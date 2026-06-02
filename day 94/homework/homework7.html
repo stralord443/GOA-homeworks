@@ -1,0 +1,32 @@
+<!-- 8) შექმენი 4 სურათის გალერეა, სადაც გამოიყენებ სხვადასხვა filter-ს (grayscale, contrast, brightness, sepia).
+ hover-ზე ყველა სურათი უნდა დაბრუნდეს ნორმალურ მდგომარეობაში smooth transition-ით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-10">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="overflow-hidden rounded-xl shadow-md">
+            <img src="https://randomwordgenerator.com/img/picture-generator/57e2d54a4c56ab14f1dc8460962e33791c3ad6e04e5074417c2e7dd29e4dc7_640.jpg" class="w-full h-60 object-cover grayscale hover:grayscale-0 
+                transition duration-500"/>
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md">
+            <img src="https://randomwordgenerator.com/img/picture-generator/57e2d54a4c56ab14f1dc8460962e33791c3ad6e04e5074417c2e7dd29e4dc7_640.jpg"class="w-full h-60 object-cover contrast-150 hover:contrast-100 
+                transition duration-500"/>
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md">
+            <img src="https://randomwordgenerator.com/img/picture-generator/57e2d54a4c56ab14f1dc8460962e33791c3ad6e04e5074417c2e7dd29e4dc7_640.jpg"class="w-full h-60 object-cover brightness-50 hover:brightness-100 
+                transition duration-500"/>
+        </div>
+        <div class="overflow-hidden rounded-xl shadow-md">
+            <img src="https://randomwordgenerator.com/img/picture-generator/57e2d54a4c56ab14f1dc8460962e33791c3ad6e04e5074417c2e7dd29e4dc7_640.jpg" class="w-full h-60 object-cover sepia hover:sepia-0 
+               transition duration-500"/>
+        </div>
+    </div>
+</body>
+</html>

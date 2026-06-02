@@ -1,0 +1,23 @@
+<!-- 2) შექმენი p ელემენტი და ::after-ით ტექსტის ბოლოს დაამატე სიტყვა “NEW” წითელი ფერით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            font-size: 32px;
+        }
+        .div1::after{
+            content: "new";
+            color: red;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">shop is </div>
+</body>
+</html>

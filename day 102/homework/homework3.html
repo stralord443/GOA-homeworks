@@ -1,0 +1,42 @@
+<!-- 4) შექმენი Payment კლასი.
+მონაცემები: amount
+ლოგიკა:
+შექმენი შიდა მეთოდი _applyDiscount() → თუ amount > 200, დააკლებს 10%
+მთავარი მეთოდი calculate():
+გამოიძახოს _applyDiscount()
+დაამატოს 2% საკომისიო
+დააბრუნოს შედეგი toFixed(2)
+ბოლოს console.log-ში გამოიტანე შედეგი -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Payment{
+            constructor (amount){
+                this.amount = amount
+            }
+            _applyDiscount(){
+                let amount = this.amount
+                if (amount >=200){
+                    return amount *= 0.9
+                }
+            }
+            calculate() {
+                this._applyDiscount()// გამოვიძახეთ შიდა მეთოდი
+                this.amount *= 1.02 // +2% საკომისიო
+                return this.amount.toFixed(2) // ვაბრუნებთ 2 ათწილადამდე
+            }
+        }
+        
+        const payment = new Payment(1000)
+        console.log(payment.calculate())
+        
+    </script>
+</body>
+</html>

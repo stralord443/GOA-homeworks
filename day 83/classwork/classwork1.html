@@ -1,0 +1,28 @@
+<!-- 2) მოცემულია ობიექტი:
+{
+  city: "Tbilisi",
+  country: "Georgia"
+}
+დესტრუქტურინგის გამოყენებით ამოიღე მხოლოდ city და გამოიტანეთ. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let object = {
+        city: "Tbilisi",
+        country: "Georgia"
+    }
+
+    let {city} = object
+
+    console.log(city)
+    </script>
+</body>
+</html>

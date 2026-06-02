@@ -1,0 +1,72 @@
+<!-- 1.შექმენი თამაში სადაც თავიდან წერია Don’t Click თუ მომხმარებელი დააჭერს წააგებს ცოტა ხანში ტექსტი შეიცვლება
+ Click NOW მომხმარებელმა უნდა დააჭიროს სწრაფად ბოლოს გამოიტანე დრო -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-900 text-white">
+
+    <div class="text-center">
+        <button id="btn" class="px-10 py-6 text-2xl bg-red-600 rounded-xl hover:bg-red-700 transition">
+        Don't Click</button>
+        <p id="result" class="mt-6 text-xl"></p>
+    </div>
+
+    <script>
+        const btn = document.getElementById("btn")
+        const result = document.getElementById("result")
+
+        let gameStarted = false
+        let canClick = false
+        let startTime = 0
+        let timeout
+
+    // თამაშის დაწყება
+    function startGame() {
+        result.textContent = ""
+        btn.textContent = "Don't Click"
+        btn.classList.remove("bg-green-600")
+        btn.classList.add("bg-red-600")
+
+      canClick = false
+
+      // რანდომ დრო (2-3 წამი)
+      const delay = Math.random() * 1000 + 2000
+
+    timeout = setTimeout(() => {
+        btn.textContent = "Click NOW!"
+        btn.classList.remove("bg-red-600")
+        btn.classList.add("bg-green-600")
+
+        canClick = true
+        startTime = Date.now()
+    }, delay)
+}
+
+    btn.addEventListener("click", () => {
+        if (!gameStarted) {
+            gameStarted = true
+            startGame()
+            return
+        }
+
+    if (!canClick) {
+        clearTimeout(timeout)
+        result.textContent = "❌ You clicked too early! You lose."
+        gameStarted = false
+    } else {
+        const reactionTime = Date.now() - startTime
+        result.textContent = `⏱️ Your time: ${reactionTime} ms`
+        gameStarted = false
+        }
+})
+  </script>
+
+    
+</body>
+</html>

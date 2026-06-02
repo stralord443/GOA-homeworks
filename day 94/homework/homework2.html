@@ -1,0 +1,51 @@
+<!-- 3) შექმენი 3 ბარათის (card) grid layout, სადაც თითოეულ ბარათს ექნება სურათი, სათაური და ტექსტი.
+გამოიყენე hover ეფექტები (scale, shadow გაზრდა). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1'
+          },
+          borderRadius: {
+            xl2: '20px'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 p-10">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl2 shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="https://randomwordgenerator.com/img/picture-generator/53e2dd444d56a514f1dc8460962e33791c3ad6e04e507440762e7ad39144c1_640.jpg" class="w-full h-48 object-cover" />
+            <div class="p-5">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Nature</h3>
+                <p class="text-gray-600 text-sm">Discover beautiful landscapes and relaxing ბუნებური ხედები.</p>
+            </div>
+        </div>
+        <div class="bg-white rounded-xl2 shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="https://randomwordgenerator.com/img/picture-generator/53e2dd444d56a514f1dc8460962e33791c3ad6e04e507440762e7ad39144c1_640.jpg" class="w-full h-48 object-cover" />
+                <div class="p-5">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">City Life</h3>
+                    <p class="text-gray-600 text-sm">Explore modern ქალაქები და მათი დინამიური ცხოვრება.</p>
+                </div>
+        </div>
+        <div class="bg-white rounded-xl2 shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="https://randomwordgenerator.com/img/picture-generator/53e2dd444d56a514f1dc8460962e33791c3ad6e04e507440762e7ad39144c1_640.jpg" class="w-full h-48 object-cover" />
+            <div class="p-5">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Technology</h3>
+                <p class="text-gray-600 text-sm">Learn about the latest ტექნოლოგიური ტენდენციები.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

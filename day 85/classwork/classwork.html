@@ -1,0 +1,27 @@
+<!-- 1) მოცემულია მასივი:
+const colors = ["red", "green", "blue", "yellow", "black"]
+Destructuring-ის გამოყენებით:
+აიღეთ პირველი ორი ფერი ცალკე ცვლადებში (firstColor, secondColor)
+დანარჩენი ფერები შეინახეთ ახალ მასივში rest ოპერატორის გამოყენებით
+დაბეჭდეთ ყველა ცვლადი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const colors = ["red", "green", "blue", "yellow", "black"]
+
+        let [firstColor, secondColor, ...otherColor] = colors
+
+        console.log(firstColor)
+        console.log(secondColor)
+        console.log(otherColor)
+    </script>
+</body>
+</html>

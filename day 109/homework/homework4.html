@@ -1,0 +1,45 @@
+<!-- 5) შექმენი კლასი OnlineGame, რომელსაც ექნება public მეთოდი startMatch().
+ამ მეთოდის გამოძახებისას უნდა გაეშვას private მეთოდები:
+#checkPlayers()
+#loadMap()
+#startGame()
+საბოლოოდ კონსოლში უნდა გამოიტანოს:
+"Match started" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class OnlineGame {
+            startMatch() {
+                this.#checkPlayers()
+                this.#loadMap()
+                this.#startGame()
+
+        console.log("Match started")
+    }
+
+    #checkPlayers() {
+        console.log("Checking players...")
+    }
+
+    #loadMap() {
+        console.log("Loading map...")
+    }
+
+    #startGame() {
+        console.log("Starting game...")
+    }
+}
+
+    const game = new OnlineGame()
+
+    game.startMatch()
+    </script>
+</body>
+</html>

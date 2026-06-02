@@ -1,0 +1,30 @@
+<!-- 3) შექმენი ფუნქცია, რომელიც პარამეტრად იღებს ობიექტს:
+{
+  price: 100,
+  discount: 20
+}
+დესტრუქტურინგით გამოთვალე საბოლოო ფასი (price - discount). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let obj = {
+    price: 100,
+    discount: 20
+    }
+
+    function final ({price, discount}){
+        return price - discount
+    }
+    console.log(final(obj))
+
+    </script>
+</body>
+</html>

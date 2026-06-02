@@ -1,0 +1,44 @@
+<!-- 1) შექმენი ფორმა 2 სექციით (ლოგინი): email პაროლი
+ფორმას დაუმატე ლამაზი დიზაინი (shadow, rounded, spacing). input-ებზე გააკეთე focus ეფექტები
+(focus:ring, focus:border) შენი custom ფერებით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#e54646",
+            primaryDark: '#4f46e5'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
+        <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Login</h2>
+        <form class="space-y-5">
+            <div>
+                <label class="block text-sm font-medium text-gray-600 mb-1">Email</label>
+                <input type="email" placeholder="you@example.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg 
+                focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-200"/>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-600 mb-1">Password</label>
+            <input type="password" placeholder="......."class="w-full px-4 py-2 border border-gray-300 rounded-lg 
+                focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-200"/>
+            </div>
+        <button type="submit" class="w-full bg-primary text-black py-2 rounded-lg hover:bg-primaryDark 
+            transition duration-200 font-medium shadow-md">Sign In</button>
+        </form>
+    </div>
+</body>
+</html>

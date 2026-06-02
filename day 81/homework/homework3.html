@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4) მოცემულია თანამშრომლების სია სამუშაო საათებით. დაწერეთ პროგრამა, 
+    რომელიც დაადგენს რამდენმა თანამშრომელმა იმუშავა 40 ან მეტი საათი, 
+    რამდენმა ნაკლები, ასევე გამოითვლის ყველა თანამშრომლის ნამუშევარი 
+    საათების ჯამსა და საშუალოს. ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით. -->
+
+    <script>
+    let employees = [
+        { name: "ანა", hours: 42 },
+        { name: "გიორგი", hours: 38 },
+        { name: "მარიამი", hours: 45 },
+        { name: "ლევანი", hours: 30 },
+        { name: "ნინო", hours: 40 }
+    ]
+
+
+    let hours = employees.reduce((acc,curr)=>{
+        acc.totalhours+=curr.hours
+        if (curr.hours >= 40){
+            acc.overwork++
+        }else{
+            acc.underwork++
+        } return acc
+    },{
+    overwork: 0,
+    underwork: 0,
+    totalhours: 0
+    })
+    hours.middlearithmetic = hours.totalhours / employees.length
+
+    console.log(hours)
+    </script>
+</body>
+</html>

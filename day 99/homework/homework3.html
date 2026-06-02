@@ -1,0 +1,95 @@
+<!-- 4) Multi-Round Reaction Game
+შექმენი თამაში, სადაც მომხმარებელი თამაშობს 5 რაუნდს. ყოველ რაუნდში გარკვეული დროის შემდეგ ყუთი იცვლის
+ფერს და ხდება დასაჭერი. მომხმარებელმა უნდა დააჭიროს რაც შეიძლება სწრაფად. თითოეულ რაუნდში იზომება რეაქციის
+დრო, ხოლო ბოლოს გამოითვლება და გამოჩნდება საშუალო რეაქციის დრო. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+
+    <div class="text-center">
+        <h1 class="text-3xl font-bold mb-4">Reaction Time Game</h1>
+
+        <div id="box"
+            class="w-64 h-64 bg-red-500 mx-auto flex items-center justify-center text-xl cursor-pointer select-none rounded-xl">Click Start
+        </div>
+
+        <button id="startBtn"class="mt-6 px-6 py-2 bg-blue-500 rounded-lg hover:bg-blue-600">Start Game</button>
+
+        <p id="info" class="mt-4"></p>
+    </div>
+
+<script>
+    let round = 0
+    let totalRounds = 5
+    let startTime
+    let waiting = false
+    let reactionTimes = []
+
+    const box = document.getElementById("box")
+    const startBtn = document.getElementById("startBtn")
+    const info = document.getElementById("info")
+
+    startBtn.onclick = () => {
+        round = 0
+        reactionTimes = []
+        startBtn.disabled = true
+        info.textContent = ""
+        nextRound()
+    }
+
+    function nextRound() {
+        if (round >= totalRounds) {
+            endGame()
+            return
+        }
+
+    box.textContent = "Wait..."
+    box.classList.remove("bg-green-500")
+    box.classList.add("bg-red-500")
+    waiting = true
+
+    let delay = Math.random() * 2000 + 1000;
+
+    setTimeout(() => {
+        box.classList.remove("bg-red-500")
+        box.classList.add("bg-green-500")
+        box.textContent = "CLICK!"
+        startTime = Date.now()
+        waiting = false
+    }, delay)
+    }
+
+    box.onclick = () => {
+        if (waiting) {
+            info.textContent = "Too early! Try again."
+        return
+    }
+
+    if (!startTime) return
+
+    let reactionTime = Date.now() - startTime
+    reactionTimes.push(reactionTime)
+
+    info.textContent = `Round ${round + 1}: ${reactionTime} ms`
+    round++
+    startTime = null
+
+    setTimeout(nextRound, 1000)
+    }
+
+    function endGame() {
+        let avg = reactionTimes.reduce((a, b) => a + b, 0) / reactionTimes.length
+        box.textContent = "Done!"
+        info.textContent = `Average Reaction Time: ${Math.round(avg)} ms`
+        startBtn.disabled = false
+    }
+</script>
+</body>
+</html>

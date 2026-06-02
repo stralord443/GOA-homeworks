@@ -1,0 +1,34 @@
+<!-- 5)Show / Hide Info
+შექმენი ტექსტი რომელიც თავიდან დამალულია
+შექმენი ღილაკი
+ღილაკზე დაჭერით ტექსტი უნდა გამოჩნდეს
+მეორედ დაჭერით ისევ უნდა დაიმალოს
+გამოიყენე classList.toggle ან classList.add და remove. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inv{
+            opacity: 0;
+        }
+        .vis{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="messageBox" class="inv">hello</div>
+    <br>
+    <button onclick="textChange()">on/off</button>
+
+    <script>
+        function textChange() {
+            document.getElementById("messageBox").classList.toggle("vis")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- 3) შექმენი loader 5 ელემენტით (flex gap-3).
+ყველას ჰქონდეს animate-pulse, მაგრამ განსხვავებული delay (გამოიყენე arbitrary value: [animation-delay:200ms] და ა.შ.).
+ზომები იყოს განსხვავებული (w-2 h-2 ... w-6 h-6).
+Loader იყოს ვერტიკალურად და ჰორიზონტალურად ცენტრში.
+დამატებითი პირობა: dark mode-ზე ფერი შეიცვალოს (dark:bg-white). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="min-h-screen flex items-center justify-center dark:bg-black">
+        <div class="flex items-end gap-3">
+            <div class="w-2 h-2 bg-black dark:bg-white rounded-full animate-pulse"></div>
+            <div class="w-3 h-3 bg-black dark:bg-white rounded-full animate-pulse [animation-delay:200ms]"></div>
+            <div class="w-4 h-4 bg-black dark:bg-white rounded-full animate-pulse [animation-delay:400ms]"></div>
+            <div class="w-5 h-5 bg-black dark:bg-white rounded-full animate-pulse [animation-delay:600ms]"></div>
+            <div class="w-6 h-6 bg-black dark:bg-white rounded-full animate-pulse [animation-delay:800ms]"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- 4) შექმენი კლასი StringHelper, სადაც static მეთოდები იქნება: toUpper(str) და toLower(str). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class StringHelper {
+            static toUpper(str) {
+            return str.toUpperCase()
+        }
+
+        static toLower(str) {
+            return str.toLowerCase()
+        }
+    }
+
+    console.log(StringHelper.toUpper("hello"))
+    console.log(StringHelper.toLower("WORLD"))
+    </script>
+</body>
+</html>

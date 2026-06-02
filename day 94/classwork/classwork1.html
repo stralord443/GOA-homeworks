@@ -1,0 +1,53 @@
+<!-- 2) იმავე ფორმაში დაამატე input-ებზე focus ეფექტები (მაგ. focus:ring, focus:border) და შეცვალე ფერები შენი custom theme-დან. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4F46E5', 
+            secondary: '#0EA5E9',
+            accent: '#22C55E'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <form class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md space-y-6">
+        <div>
+            <h2 class="text-lg font-semibold mb-3 text-gray-700">ინფორმაცია</h2>
+            <div class="space-y-3">
+                <input type="text" placeholder="სახელი" class="w-full px-4 py-2 border border-gray-300 rounded-lg 
+                focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-200">
+                <input type="text" placeholder="გვარი" class="w-full px-4 py-2 border border-gray-300 rounded-lg 
+                focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition duration-200">
+            </div>
+        </div>
+        <div>
+            <h2 class="text-lg font-semibold mb-3 text-gray-700">კონტაქტი</h2>
+                <div class="space-y-3">
+                    <input type="email" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg 
+                    focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition duration-200">
+                    <input type="tel" placeholder="ტელეფონი" class="w-full px-4 py-2 border border-gray-300 rounded-lg 
+                    focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition duration-200">
+                </div>
+              </div>
+        <div>
+          <h2 class="text-lg font-semibold mb-3 text-gray-700">დამატებითი ინფორმაცია</h2>
+            <textarea rows="4" placeholder="დაწერე დამატებითი ინფორმაცია..." class="w-full px-4 py-2 border border-gray-300
+              rounded-lg resize-nonefocus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition duration-200">
+            </textarea>
+        </div>
+        <button type="submit" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-indigo-700 focus:ring-2
+          focus:ring-primary focus:ring-offset-2transition duration-300">გაგზავნა</button>
+    </form>
+</body>
+</html>

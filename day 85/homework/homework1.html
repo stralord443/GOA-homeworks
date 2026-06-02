@@ -1,0 +1,48 @@
+<!-- 2) მოცემულია ობიექტი:
+const employee = {
+id: 101,
+name: "Luka",
+position: "Developer",
+salary: 3000,
+contact: {
+email: "luka@gmail.com",
+phone: "555-123-456"
+}
+}
+Nested destructuring-ის გამოყენებით:
+name გადაარქვით employeeName
+salary გადაარქვით monthlySalary
+contact-იდან პირდაპირ აიღეთ email (rename გააკეთეთ workEmail)
+phone-ს მიეცით default მნიშვნელობა "Not Provided"
+დანარჩენი ზედა დონის მონაცემები შეინახეთ restEmployee ობიექტში -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const employee = {
+        id: 101,
+        name: "Luka",
+        position: "Developer",
+        salary: 3000,
+        contact: {
+        email: "luka@gmail.com",
+        phone: "555-123-456"
+    }}
+
+    let {name:emploeeName, salary:monthlySalary, contact:{email:workEmail,phone=NoyProvided}, ...restEmpoloee} = employee
+
+    console.log(emploeeName)
+    console.log(monthlySalary)
+    console.log(workEmail)
+    console.log(phone)
+    console.log(restEmpoloee)
+    </script>
+</body>
+</html>

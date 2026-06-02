@@ -1,0 +1,35 @@
+<!-- 1)ვარსკვლავის ფორმის clip-path
+პირობა:
+შექმენით ყუთი (div) ზომით 200px x 200px. გამოიყენეთ clip-path, რომ ყუთი მიიღოს ვარსკვლავის ფორმა. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .star{
+            background-color: aqua;
+            border-color: red;
+            height: 200px;
+            width: 200px;
+            clip-path: polygon(
+                50% 0%,
+                37% 33%,
+                0% 42%,
+                32% 55%,
+                18% 100%,
+                50% 70%,
+                82% 100%,
+                68% 55%,
+                100% 42%,
+                63% 33%
+            );      
+        }
+    </style>
+</head>
+<body>
+    <div class="star">1</div>
+</body>
+</html>

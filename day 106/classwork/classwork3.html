@@ -1,0 +1,35 @@
+<!-- 6) ექმენი Car კლასი:
+brand
+year
+და მეთოდი carInfo().
+
+შემდეგ შექმენი 2 ობიექტი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car {
+            constructor(brand, year) {
+            this.brand = brand
+            this.year = year
+    }
+
+    carInfo() {
+        return `Brand: ${this.brand}, Year: ${this.year}`
+    }
+}
+
+    const car1 = new Car("Toyota", 2015)
+    const car2 = new Car("BMW", 2022)
+
+    console.log(car1.carInfo())
+    console.log(car2.carInfo())
+    </script>
+</body>
+</html>

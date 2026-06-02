@@ -1,0 +1,49 @@
+#dark-mode-toggle{
+    display: none;
+}
+label{
+    position: fixed;
+    background: aqua;
+    top: 20px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+label:hover{
+    background: rgb(104, 104, 255)
+}
+body{
+    background: rgb(255, 174, 174);
+    margin: 0px;
+    transition: background 0.5s;
+
+}
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
+    transition: background 0.5s;
+}
+.child{
+    background: rgb(177, 177, 177);
+    border-radius: 12px;
+    padding: 20px;
+    transition: background 0.5s;
+}
+
+#dark-mode-toggle:checked + label + .cont{
+    background:rgb(34, 34, 34);
+    color: white;
+
+}
+#dark-mode-toggle:checked + label + .cont .child{
+    background:rgb(54, 54, 54);
+}
+#dark-mode-toggle:checked ~ body{
+    background:rgb(28, 28, 28);
+}

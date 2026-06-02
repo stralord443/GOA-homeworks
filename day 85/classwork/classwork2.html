@@ -1,0 +1,39 @@
+<!-- 3 )შექმენით ფუნქცია, რომელიც პარამეტრად მიიღებს ობიექტს შემდეგი სტრუქტურით:
+{name: “Nika”,
+address: {
+city: “Tbilisi”,
+zip: “0101”}}
+Destructuring-ის გამოყენებით ფუნქციაში:
+გამოიტანეთ name
+გამოიტანეთ address ობიექტიდან city და zip
+დამატებით:
+თუ address ობიექტი არ გადმოეცემა ფუნქციას, გამოიყენეთ default მნიშვნელობები:
+city იყოს “Unknown”
+zip იყოს “0000”
+ფუნქცია უნდა მუშაობდეს ორივე შემთხვევაში, როცა address არსებობს და როცა არ არსებობს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let obj = {
+            name:"nika",
+            address: {
+            city: "Tbilisi",
+            zip: "0101"
+        }}
+        
+        function print({name, address:{city,zip} = {city: "unknown",zip: "0000"}}) {
+            console.log(name + " " +city +" " + zip)
+        }
+
+        print(obj)
+    </script>
+</body>
+</html>

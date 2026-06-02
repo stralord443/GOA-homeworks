@@ -1,0 +1,88 @@
+<!-- 5) Reaction + Score System
+შექმენი თამაში, სადაც მომხმარებელი აჭერს სწორ მომენტში და იზომება მისი რეაქციის დრო. მიღებული დროის მიხედვით
+ეკრანზე უნდა გამოჩნდეს შეფასება: თუ რეაქცია არის ძალიან სწრაფი, გამოიტანოს ერთ-ერთი ტექსტი, თუ საშუალო — სხვა,
+და თუ ნელი — სხვა ტექსტი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+
+<div class="text-center">
+    <h1 class="text-3xl font-bold mb-4">Reaction Score Game</h1>
+
+    <div id="box"
+        class="w-64 h-64 bg-red-500 mx-auto flex items-center justify-center text-xl cursor-pointer select-none rounded-xl">Click Start
+    </div>
+
+    <button id="startBtn"
+        class="mt-6 px-6 py-2 bg-blue-500 rounded-lg hover:bg-blue-600">Start
+    </button>
+
+    <p id="result" class="mt-4 text-lg"></p>
+</div>
+
+<script>
+    let startTime
+    let waiting = false
+
+    const box = document.getElementById("box")
+    const startBtn = document.getElementById("startBtn")
+    const result = document.getElementById("result")
+
+    startBtn.onclick = () => {
+        result.textContent = ""
+        box.textContent = "Wait..."
+        box.classList.remove("bg-green-500")
+        box.classList.add("bg-red-500")
+        waiting = true
+
+    let delay = Math.random() * 2000 + 1000
+
+    setTimeout(() => {
+        box.classList.remove("bg-red-500");
+        box.classList.add("bg-green-500");
+        box.textContent = "CLICK!";
+        startTime = Date.now();
+        waiting = false;
+    }, delay)
+    }
+
+    box.onclick = () => {
+        if (waiting) {
+            result.textContent = "Too early! ❌"
+        return
+    }
+
+    if (!startTime) return
+
+    let reactionTime = Date.now() - startTime;
+
+    let message = ""
+    let color = ""
+
+    if (reactionTime < 300) {
+        message = "⚡ ძალიან სწრაფი!"
+        color = "text-green-400"
+    } else if (reactionTime < 500) {
+        message = "👍 საშუალო რეაქცია"
+        color = "text-yellow-400"
+    } else {
+        message = "🐢 ნელი რეაქცია"
+        color = "text-red-400"
+    }
+
+    result.className = "mt-4 text-lg " + color
+    result.textContent = `Reaction Time: ${reactionTime} ms — ${message}`
+
+    box.textContent = "Click Start"
+    startTime = null
+}
+</script>
+</body>
+</html>

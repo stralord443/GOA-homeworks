@@ -1,0 +1,21 @@
+<!-- 6) შექმენი სურათზე overlay ეფექტი:სურათზე ნაგულისხმევად იყოს dark overlay
+hover-ზე overlay გაქრეს და ტექსტი გამოჩნდეს გამოიყენე opacity და transition. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="relative w-80 h-56 rounded-xl2 overflow-hidden group">
+        <img src="https://randomwordgenerator.com/img/picture-generator/57e2d54a4c56ab14f1dc8460962e33791c3ad6e04e5074417c2e7dd29e4dc7_640.jpg" class="w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-black bg-opacity-60 transition duration-300 group-hover:bg-opacity-0"></div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+            <h3 class="text-white text-xl font-semibold">Beautiful Nature</h3>
+        </div>
+    </div>
+</body>
+</html>

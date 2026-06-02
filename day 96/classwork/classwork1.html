@@ -1,0 +1,75 @@
+<!-- 5) შექმენი tooltip კომპონენტი TailwindCSS-ით, რომელიც გამოჩნდება hover და focus დროს
+6) tooltip დამალული იყოს default-ზე (opacity-0, invisible)
+7) hover ან focus დროს გამოჩნდეს (group-hover, group-focus)
+8) ailwind.config.js-ში გააფართოვე theme.extend და დაამატე custom spacing tooltip-ისთვის.
+დაამატე custom colors (tooltip-bg, tooltip-text) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<form class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg space-y-6">
+  <!-- Name Input -->
+  <div class="relative">
+    <input
+      type="text"
+      id="name"
+      placeholder=" "
+      class="peer block w-full rounded-md border border-gray-300 px-3 pt-5 pb-2 text-gray-900 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:outline-none"
+      required
+    />
+    <label
+      for="name"
+      class="absolute left-3 top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-blue-500"
+    >
+      Name
+    </label>
+  </div>
+
+  <!-- Email Input -->
+  <div class="relative">
+    <input
+      type="email"
+      id="email"
+      placeholder=" "
+      class="peer block w-full rounded-md border border-gray-300 px-3 pt-5 pb-2 text-gray-900 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:outline-none"
+      required
+    />
+    <label
+      for="email"
+      class="absolute left-3 top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-blue-500"
+    >
+      Email
+    </label>
+  </div>
+
+  <!-- Password Input -->
+  <div class="relative">
+    <input
+      type="password"
+      id="password"
+      placeholder=" "
+      class="peer block w-full rounded-md border border-gray-300 px-3 pt-5 pb-2 text-gray-900 focus:border-blue-500 focus:ring focus:ring-blue-300 focus:outline-none"
+      required
+    />
+    <label
+      for="password"
+      class="absolute left-3 top-2.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-5 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-blue-500"
+    >
+      Password
+    </label>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition"
+  >
+    Submit
+  </button>
+</form>
+</html>

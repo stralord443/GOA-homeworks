@@ -1,0 +1,27 @@
+/* 4) კომენტარების სახით ახსენით Linear Gradient */
+
+/* linear gradient is a gradient form one side to another */
+
+/* 5) გააკეთე ფონი, რომელიც გადადის წითელიდან ყვითელამდე. */
+
+.div1{
+    height: 100px;
+    width: 300px;
+    background: linear-gradient(to right, red, yellow);
+}
+
+/* 6) გააკეთე gradient ზოლით მარჯვნიდან მარცხნივ, ლურჯიდან თეთრამდე. */
+
+.div2{
+    height: 100px;
+    width: 300px;
+    background: linear-gradient(to left, blue, white);
+}
+
+/* 7) გააკეთე ღილაკი, რომლის ფონი გადადის მწვანედან ღია მწვანემდე. */
+
+.but1{
+    height: 100px;
+    width: 300px;
+    background: linear-gradient(to right, green, lightgreen);
+}

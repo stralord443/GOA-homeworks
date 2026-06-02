@@ -1,0 +1,58 @@
+<!-- 1) შექმენი Person კლასი, რომელსაც ექნება:
+- name
+- age
+
+გამოიყენე getter სახელისთვის.
+გამოიყენე setter ასაკისთვის, რომელიც არ დაუშვებს უარყოფით რიცხვს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 1) შექმენი Person კლასი, რომელსაც ექნება:
+// - name
+// - age
+
+// გამოიყენე getter სახელისთვის.
+// გამოიყენე setter ასაკისთვის, რომელიც არ დაუშვებს უარყოფით რიცხვს.
+
+    class Person {
+        constructor(name, age) {
+            this._name = name
+            this.age = age
+        }
+
+    get name() {
+        return this._name
+    }
+
+    set age(value) {
+        if (value < 0) {
+            console.log("ასაკი არ შეიძლება იყოს უარყოფითი")
+        } else {
+            this._age = value
+        }
+    }
+
+    get age() {
+        return this._age
+    }
+}
+
+    const person1 = new Person("Gio", 20)
+
+    console.log(person1.name)
+    console.log(person1.age)
+
+    person1.age = -5
+    person1.age = 25
+
+    console.log(person1.age)
+    </script>
+</body>
+</html>

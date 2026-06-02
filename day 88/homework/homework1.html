@@ -1,0 +1,24 @@
+<!-- 2) შექმენი მრგვალი ღილაკი, რომელსაც აქვს animate-bounce, მაგრამ:
+
+მხოლოდ mobile და md ზომაზე მუშაობდეს
+
+lg-დან ზემოთ animation შეწყდეს
+Hover-ზე შეიცვალოს ფონი და ტექსტის ფერი.
+დამატებითი პირობა: focus-ზე დაემატოს ring ეფექტი (focus:ring-4) და animation შეწყდეს focus დროს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <button
+        class="w-16 h-16 rounded-full bg-blue-500 text-white flex items-center justify-center
+        animate-bounce lg:animate-none hover:bg-blue-600 hover:text-yellow-200
+        focus:outline-none focus:ring-4 focus:ring-blue-300 focus:animate-none">
+        Go</button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!-- 1)  შექმენი Payment კლასი.
+მონაცემები: თანხა (amount)
+ლოგიკა:
+თუ თანხა > 200 ->10% ფასდაკლება
+შემდეგ დაემატოს 2% საკომისიო
+თუ საბოლოო თანხა > 300 ->დამატებით 5 ლარი
+დაბრუნდეს საბოლოო გადასახდელი თანხა -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Payment {
+    constructor(amount) {
+        this.amount = amount
+    }
+
+    calculateFinalAmount() {
+        let finalAmount = this.amount
+
+    if (finalAmount > 200) {
+        finalAmount *= 0.9
+    }
+
+    finalAmount *= 1.02
+
+    if (finalAmount > 300) {
+        finalAmount += 5
+    }
+
+    return finalAmount
+    }
+}
+
+const payment = new Payment(220)
+console.log(payment.calculateFinalAmount())
+
+    </script>
+</body>
+</html>

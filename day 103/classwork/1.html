@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function wasPackageReceivedYesterday(tz_from, tz_to, start, duration){
+  let from = tz_from + start
+  let to = tz_to + start
+  
+  let count_from = 0
+  let count_to = 0
+  
+if (from + duration >12){
+  count_from++
+}
+if (to + duration >12){
+  count_to++
+}
+  if (count_from=count_to){
+    return false
+  }else{
+    return true
+  }
+}
+
+console.log(wasPackageReceivedYesterday(1,4,6,3))
+    </script>
+</body>
+</html>

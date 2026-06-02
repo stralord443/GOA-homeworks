@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 1) შექმენი კლასი WashingMachine, რომელსაც ექნება public მეთოდი startWash(). ამ მეთოდის გამოძახებისას უნდა გაეშვას private
+//  მეთოდები: #addWater(), #addSoap() და #spinClothes(). საბოლოოდ კონსოლში უნდა გამოიტანოს ტექსტი: "Washing finished".
+        class WashingMachine {
+            startWash() {
+                this.#addWater()
+                this.#addSoap()
+                this.#spinClothes()
+
+                console.log("Washing finished")
+    }
+
+    #addWater() {
+        console.log("Water added")
+    }
+
+    #addSoap() {
+        console.log("Soap added")
+    }
+
+    #spinClothes() {
+        console.log("Clothes are spinning")
+    }
+}
+
+    const machine = new WashingMachine()
+
+    machine.startWash()
+    </script>
+</body>
+</html>

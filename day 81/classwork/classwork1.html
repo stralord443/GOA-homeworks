@@ -1,0 +1,39 @@
+<!-- 2) მოცემულია მოსწავლეების დასწრების პროცენტების მასივი. დაწერეთ პროგრამა, რომელიც დაადგენს
+რამდენი მოსწავლე ეკუთვნის შემდეგ კატეგორიებს:
+დაბალი დასწრება — 50%-ზე ნაკლები
+საშუალო დასწრება — 50%-დან 79%-ის ჩათვლით
+მაღალი დასწრება — 80% და მეტი
+ამოცანა შეასრულეთ forEach მეთოდის გამოყენებით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const attend = [20,30,40,50,70,80,92]
+
+        const attends = {
+            low:0,
+            medium:0,
+            high:0
+        }
+
+        const result = attend.forEach(score => {
+            if (score < 50){
+                attends.low++
+            }else if (score <=79){
+                attends.medium++
+            }else {
+                attends.high++
+            }
+        })
+        console.log(attends)
+
+    </script>
+</body>
+</html>

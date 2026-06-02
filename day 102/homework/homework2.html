@@ -1,0 +1,37 @@
+<!-- 3) შექმენი Salary კლასი.
+მონაცემები: ხელფასი (amount)
+ლოგიკა:
+20% გადასახადი
+თუ დარჩენილი > 2000 ->დამატებით 5%
+თუ < 500 ->არ აკლდება გადასახადი
+დააბრუნე სუფთა ხელფასი -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Salary {
+            constructor(amount){
+                this.amount = amount
+            }
+            logic(){
+                let amount = this.amount
+                if (amount >= 2000){
+                    return amount *= 0.75
+                }else if (amount < 500){
+                    return amount
+                }else{
+                    return amount *= 0.8
+                }
+            }
+        }
+        const salary = new Salary(100)
+        console.log(salary.logic())
+    </script>
+</body>
+</html>

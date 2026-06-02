@@ -1,0 +1,83 @@
+<!-- 1) შექმენი Modal ფანჯარა TailwindCSS-ით.
+ღილაკზე დაკლიკებისას უნდა გაიხსნას Modal.
+Modal-ს უნდა ჰქონდეს:
+overlay (შავი ნახევრად გამჭვირვალე ფონით)
+close ღილაკი
+title
+2) წინა დავალებას დაამატე, Modal-ის გარეთ დაკლიკებისას დაიხუროს
+3) დაამატე ანიმაციები და ლოგიკა:
+გახსნისას: opacity-0 → opacity-100, scale-95 → scale-100
+დახურვისას: ანიმაციით გაქრობა -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+
+    <button id="openBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg">გახსნა Modal</button>
+
+    <div id="modal" class="fixed inset-0 hidden items-center justify-center">
+    
+        <div id="overlay" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300"></div>
+
+        <div id="modalContent"
+            class="relative bg-white rounded-xl shadow-lg w-96 p-6 z-10 opacity-0 scale-95 transition-all duration-300">
+      
+            <button id="closeBtn" class="absolute top-2 right-2 text-gray-500 hover:text-black">✕</button>
+
+            <h2 class="text-xl font-bold mb-4">Modal Title</h2>
+
+            <p>ეს არის Modal-ის კონტენტი.</p>
+        </div>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById('openBtn')
+        const modal = document.getElementById('modal')
+        const overlay = document.getElementById('overlay')
+        const modalContent = document.getElementById('modalContent')
+        const closeBtn = document.getElementById('closeBtn')
+
+        function openModal() {
+            modal.classList.remove('hidden')
+            modal.classList.add('flex')
+
+        setTimeout(() => {
+            overlay.classList.remove('opacity-0')
+            overlay.classList.add('opacity-100')
+
+            modalContent.classList.remove('opacity-0', 'scale-95')
+            modalContent.classList.add('opacity-100', 'scale-100')
+        }, 10)
+    }
+
+    function closeModal() {
+        overlay.classList.remove('opacity-100')
+        overlay.classList.add('opacity-0')
+
+        modalContent.classList.remove('opacity-100', 'scale-100')
+        modalContent.classList.add('opacity-0', 'scale-95')
+
+        setTimeout(() => {
+            modal.classList.add('hidden')
+            modal.classList.remove('flex')
+        }, 300)
+    }
+
+    openBtn.addEventListener('click', openModal)
+    closeBtn.addEventListener('click', closeModal)
+
+    overlay.addEventListener('click', closeModal)
+
+    modalContent.addEventListener('click', (e) => {
+        e.stopPropagation();
+    })
+  </script>
+
+</body>
+</html>

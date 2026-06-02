@@ -1,0 +1,23 @@
+/* 1) ახსენი display: grid; */
+
+/* display: grid allows to create groups in which elements will be placed */
+
+/* 2) შექმენით div.container.
+გამოიყენეთ display: grid.
+3) 3 სვეტი და 3 რიგი.
+დაამატეთ 9 ყუთი სხვადასხვა ფერით.
+ცოტა სივრცე ყუთებს შორის (gap). */
+
+.container{
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: repeat(3,200px);
+    grid-template-rows: repeat(3,100px);
+    gap: 5px;
+}
+.div1{
+    background-color: aqua;
+    align-items: center;
+    justify-content: center;
+}
+

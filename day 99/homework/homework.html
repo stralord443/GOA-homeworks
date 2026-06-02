@@ -1,0 +1,66 @@
+<!-- 1) ააგეთ დასარეგისტრილებელი ფორმა, სადაც იქნება ინფუთ ველები და ბოლოს submit ღილაკი.
+სანამ ეს ფორმა გამოჩნდება უნდა გქონდეთ საიტზე ერთი ღილაკი (singup) ცენტრში რომელზე დაჭერის შემდეგ უნდა გამოჩნდეს ეს ფორმა.
+როდესაც მომხმარებელი დააჭერს singup ღილაკს უნდა დაიწყოს დროის ათვლა და გამოჩნდეს შესავსები ფორმა, როდესაც ბოლოს დააჭერს 
+submit ღილაკს დასრულდეს დროის ათვლა და გამოიტანეთ დრო. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex items-center justify-center bg-gray-100">
+
+    <button id="signupBtn"
+        class="px-6 py-3 bg-blue-500 text-white rounded-xl shadow-lg hover:bg-blue-600 transition">Sign Up
+    </button>
+
+    <div id="formContainer"
+        class="hidden flex flex-col items-center bg-white p-6 rounded-2xl shadow-xl w-80">
+
+    <form id="signupForm" class="w-full">
+        <input type="text" placeholder="სახელი" required
+            class="w-full mb-3 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+        <input type="email" placeholder="Email" required
+            class="w-full mb-3 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+        <input type="password" placeholder="პაროლი" required
+            class="w-full mb-4 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+
+        <button type="submit"
+            class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">Submit
+        </button>
+    </form>
+
+        <p id="result" class="mt-4 text-gray-700 font-medium"></p>
+    </div>
+
+    <script>
+        let startTime, endTime
+
+        const signupBtn = document.getElementById("signupBtn")
+        const formContainer = document.getElementById("formContainer")
+        const form = document.getElementById("signupForm")
+        const result = document.getElementById("result")
+
+        signupBtn.addEventListener("click", () => {
+            startTime = new Date()
+            signupBtn.classList.add("hidden")
+            formContainer.classList.remove("hidden")
+        })
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault()
+
+            endTime = new Date()
+            let timeSpent = ((endTime - startTime) / 1000).toFixed(2)
+
+            result.textContent = `დრო: ${timeSpent} წამი`
+        })
+    </script>
+
+</body>
+</html>

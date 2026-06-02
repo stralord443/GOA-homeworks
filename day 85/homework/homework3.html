@@ -1,0 +1,54 @@
+<!-- 4) მოცემულია ობიექტი:
+const order = {
+orderId: 555,
+customer: {
+name: "Ana",
+age: 16
+},
+items: [
+{ product: "Phone", price: 1000 },
+{ product: "Case", price: 20 }
+]
+}
+Nested destructuring-ის გამოყენებით:
+customer-იდან აიღეთ name (rename → customerName)
+items მასივიდან აიღეთ პირველი პროდუქტის product და price
+მეორე პროდუქტიდან აიღეთ მხოლოდ product (rename → accessoryName)
+თუ items მასივი არ არსებობს, გამოიყენეთ default ცარიელი მასივი -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    const order = {
+        orderId: 555,
+        customer: {
+        name: "Ana",
+        age: 16
+    },
+        items: [
+    { product: "Phone", price: 1000 },
+    { product: "Case", price: 20 }
+    ]};
+
+    const {
+        customer: { name: customerName },
+        items: [
+    { product: firstProduct, price: firstPrice } = {},
+    { product: accessoryName } = {}
+    ] = []
+    } = order;
+
+    console.log(customerName);
+    console.log(firstProduct);
+    console.log(firstPrice);
+    console.log(accessoryName);
+    </script>
+</body>
+</html>

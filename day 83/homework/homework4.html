@@ -1,0 +1,26 @@
+<!-- 6) მოცემულია რიცხვების მასივი:
+[5, 12, 8, 20, 3]
+reduce გამოყენებით დაითვალე მხოლოდ ლუწი რიცხვების ჯამი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let nums = [5, 12, 8, 20, 3]
+
+        let sum = nums.reduce((acc, curr)=>{
+            if (curr % 2 === 0){
+                acc += curr
+            }
+            return acc
+        },0)
+        console.log(sum)
+    </script>
+</body>
+</html>

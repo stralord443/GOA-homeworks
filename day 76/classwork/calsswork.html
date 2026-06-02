@@ -1,0 +1,35 @@
+<!-- 1) კომენტარების სახით ახსენით რისთვის გამოიყენება ცვლადები css-ში. -->
+
+<!-- we use variables to ease programmers goad while coding and making code easyer to read -->
+
+<!-- 2) კომენტარების სახით ახსენით რისთვის გამოიყენება clip-path  css-ში. -->
+
+<!-- to create geometrical phigures -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --main-color: green;
+            --secondary-color: rgb(175, 175, 175);
+        }
+        body{
+            height: 100vh;
+            background: var(--main-color);
+        }
+        h1{
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- 3) შექმნეი :root-ში ორი ცვლადი : --main-color და --secondar-color, გამოიყენე
+     --main-color როგორც ფონის ფერი body-ზე, გამოიყენე --secondar-color როგორც ტექსტის ფერი h1-ზე. -->
+    <h1>hello</h1>
+
+</body>
+</html>

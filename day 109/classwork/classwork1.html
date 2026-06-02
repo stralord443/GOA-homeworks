@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 2) შექმენი კლასი Computer, რომელსაც ექნება public მეთოდი startComputer(). ამ მეთოდის გამოძახებისას უნდა გაეშვას private
+//  მეთოდები სისტემის ჩატვირთვისთვის, RAM-ის შესამოწმებლად და პროცესორის შესამოწმებლად. საბოლოოდ კონსოლში უნდა გამოიტანოს
+//   ტექსტი: "Computer started".
+
+    class Computer {
+        startComputer() {
+            this.#loadSystem()
+            this.#checkRAM()
+            this.#checkProcessor()
+
+            console.log("Computer started")
+    }
+
+    #loadSystem() {
+        console.log("System loading...")
+    }
+
+    #checkRAM() {
+        console.log("RAM checked")
+    }
+
+    #checkProcessor() {
+        console.log("Processor checked")
+    }
+}
+
+    const pc = new Computer()
+
+    pc.startComputer()
+    </script>
+</body>
+</html>

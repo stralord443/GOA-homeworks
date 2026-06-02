@@ -1,0 +1,112 @@
+<!-- 1) შექმენი Advanced Form TailwindCSS-ით (Floating Label + Validation)
+შექმენი ფორმა TailwindCSS-ის გამოყენებით, სადაც გამოიყენებ Floating Label Input-ს (peer magic) + დაამატებ ვალიდაციას.
+კრიტერიუმები:
+2) ფორმა უნდა შეიცავდეს მინიმუმ 4 input-ს:
+name email password confirm password
+3) label თავდაპირველად იყოს input-ის შიგნით (placeholder-ის მსგავსად)
+4) focus-ის ან ტექსტის ჩაწერისას:
+label გადავიდეს ზემოთ შემცირდეს ზომაში შეიცვალოს ფერი (მაგ: primary → secondary)
+5) დაამატე error state:
+თუ input ცარიელია → border გახდეს წითელი error message გამოჩნდეს ქვემოთ
+6) გამოიყენე:
+peer-invalid peer-placeholder-shown peer-focus
+7) დაამატე Password Toggle (show/hide)
+password input-ს ჰქონდეს icon (eye :eye:) დაჭერისას აჩვენოს/დამალოს პაროლი
+8) tailwind.config.js-ში დაამატე custom colors:
+primary secondary errorsuccess
+
+
+
+9) შექმენი Tooltip System (Advanced)
+კრიტერიუმები:
+10) შექმენი reusable Tooltip component
+(React-ში თუ გინდა + props)
+11) tooltip უნდა მუშაობდეს:
+hover-ზე
+focus-ზე -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#2563eb",
+                    secondary: "#7c3aed",
+                    error: "#dc2626",
+                    success: "#16a34a",
+                },
+            },
+        },
+    }
+    </script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <form id="form" class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md space-y-6">
+
+        <!-- Name -->
+    <div class="relative">
+        <input type="text" id="name" required
+            class="peer w-full border rounded-lg px-3 pt-5 pb-2 focus:outline-none focus:border-primary invalid:border-error
+            placeholder-transparent" placeholder="Name"/>
+        <label for="name"
+            class="absolute left-3 top-2 text-gray-400 text-sm transition-all 
+                peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500
+                peer-focus:top-2 peer-focus:text-sm peer-focus:text-primary">Name</label>
+        <p class="text-error text-sm mt-1 hidden peer-invalid:block">Name is required</p>
+    </div>
+
+        <!-- Email -->
+    <div class="relative">
+        <input type="email" id="email" required
+            class="peer w-full border rounded-lg px-3 pt-5 pb-2 focus:outline-none focus:border-primary invalid:border-error
+            placeholder-transparent" placeholder="Email"/>
+        <label for="email"
+            class="absolute left-3 top-2 text-gray-400 text-sm transition-all
+                peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base
+                peer-focus:top-2 peer-focus:text-sm peer-focus:text-primary">Email</label>
+        <p class="text-error text-sm mt-1 hidden peer-invalid:block">Valid email is required</p>
+    </div>
+
+        <!-- Password -->
+    <div class="relative">
+        <input type="password" id="password" required minlength="6"
+            class="peer w-full border rounded-lg px-3 pt-5 pb-2 focus:outline-none focus:border-primary invalid:border-error
+            placeholder-transparent"placeholder="Password"/>
+        <label for="password"
+            class="absolute left-3 top-2 text-gray-400 text-sm transition-all
+                peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base
+                peer-focus:top-2 peer-focus:text-sm peer-focus:text-primary">Password</label>
+            <!-- Toggle -->
+        <span  class="absolute right-3 top-3 cursor-pointer">👀</span>
+        <p class="text-error text-sm mt-1 hidden peer-invalid:block">Minimum 6 characters</p>
+    </div>
+
+        <!-- Confirm Password -->
+    <div class="relative">
+        <input type="password" id="confirmPassword" required
+            class="peer w-full border rounded-lg px-3 pt-5 pb-2 focus:outline-none focus:border-primary invalid:border-error
+            placeholder-transparent" placeholder="Confirm Password"/>
+
+        <label for="confirmPassword"
+            class="absolute left-3 top-2 text-gray-400 text-sm transition-all
+                peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base
+                peer-focus:top-2 peer-focus:text-sm peer-focus:text-primary">Confirm Password</label>
+        <span onclick="togglePassword('confirmPassword')" 
+            class="absolute right-3 top-3 cursor-pointer">👀</span>
+        <p id="confirmError" class="text-error text-sm mt-1 hidden">Passwords do not match</p>
+    </div>
+
+        <!-- Submit -->
+    <button type="submit"
+        class="w-full bg-primary text-white py-2 rounded-lg hover:bg-secondary transition">Submit</button>
+  </form>
+</body>
+</html>
+</html>

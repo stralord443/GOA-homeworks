@@ -1,0 +1,20 @@
+<!-- 5) შექმენი card, რომელსაც hover-ზე ექნება transform, rotate-3, scale-105 და
+ transition duration-300. hover-ზე ჩრდილიც გაიზარდოს (hover:shadow-2xl).
+  დაამატე რომ ტექსტიც ოდნავ ზემოთ აიწიოს (hover:-translate-y-2). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="max-w-sm bg-white shadow rounded-xl p-6 transition-transform duration-300 transform
+                hover:scale-105 hover:rotate-3 hover:shadow-2xl">
+        <h2 class="text-xl font-bold mb-2 transition-transform duration-300 transform hover:-translate-y-2">ბარათი</h2>
+    <p class="text-gray-700">ეს არის ინტერაქტიული ბარათი Tailwind CSS-ით. Hover-ზე ბარათი იზრდება, ციკლდება და ჩრდილი უფრო გამოხატული ხდება.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!-- 7) შექმენი ღილაკი, რომელსაც hover-ზე გამოუჩნდება ქვედა ხაზის ანიმაცია (ხაზი transform-ით გაიზარდოს). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f4f6f9;
+        font-family: sans-serif;
+    }
+
+    .btn {
+        position: relative;
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 10px 5px;
+        color: #333;
+    }
+
+    .btn::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #4a90e2;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    .btn:hover::after {
+        transform: scaleX(1);
+    }
+</style>
+</head>
+<body>
+    
+    
+    <button class="btn">press me</button>
+
+</body>
+</html>

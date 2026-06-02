@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(243,229,216);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 42px;
+}
+.container{
+    height: 1700px;
+    width: 900px;
+    background-color: white;
+    gap: 20px;
+    padding: 35px;
+    border-radius: 18px;
+}
+.image_tag1{
+    border-radius: 12px;
+}
+.p_tag1{
+    color: hsl(24, 5%, 18%);
+    font-family: "Montserrat", sans-serif;
+}
+.h2_tag1{
+    color: hsl(332, 51%, 32%);
+    transform: translateX(24px);
+}
+.p_tag2{
+    color:   hsl(24, 5%, 18%);
+}
+.h1_tag1{
+    color: hsl(14, 45%, 36%);
+}
+.p_tag3{
+    color:   hsl(24, 5%, 18%);
+    font-weight: 300;
+}
+.p_tag4{
+    color: hsl(24, 5%, 18%);
+}
+.ul_tag1{
+    color: hsl(332, 51%, 32%);
+}
+.ol_tag1{
+    color: hsl(332, 51%, 32%);
+}
+.p_tag5{
+    color: hsl(24, 5%, 18%);
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+.div_grid1{
+    display: grid;
+    grid-template-columns: repeat(2,480px);
+    grid-template-rows: repeat(1,60px);
+}
+.p_tag6{
+    color:  hsl(24, 5%, 18%);
+    transform: translateX(20px);
+    width: 200px;
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+.p_tag7{
+    color:hsl(14, 45%, 36%);
+    width: 200px;
+    font-size: 22px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+/* .container{
+    background-color: lightcoral;
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    grid-template-rows: repeat(4,100px);
+    gap: 5px;
+    justify-content: center;
+} */

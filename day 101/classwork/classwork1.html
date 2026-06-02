@@ -1,0 +1,27 @@
+<!-- 2) შექმენი class Car, რომლის constructor იღებს brand და model და ავტომატურად ამატებს year = 2020 (default მნიშვნელობა). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Car {
+        constructor(brand, model, year = 2020) {
+            this.brand = brand
+            this.model = model
+            this.year = year
+        }
+    }
+    
+    const car1 = new Car("Toyota", "Camry")
+    console.log(car1.year)
+
+    const car2 = new Car("BMW", "X5", 2023)
+    console.log(car2.year)
+    </script>
+</body>
+</html>

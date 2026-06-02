@@ -1,0 +1,31 @@
+<!-- 3) შექმენი ღილაკი და ::before-ით დაამატე ფონი, რომელიც ღილაკზე 10px-ით პატარაა 
+(width: calc(100% - 20px), height: calc(100% - 20px)). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            position: relative;
+            background-color: blue;
+            width: 300px;
+            height: 100px;
+        }
+        button::before{
+            content: "click me";
+            position: absolute;
+            background-color: aqua;
+            top: calc(100% - 90%);
+            left: calc(100% - 97%);
+            width: calc(100% - 20px);
+            height: calc(100% - 20px)
+        }
+    </style>
+</head>
+<body>
+    <button>click me</button>
+</body>
+</html>

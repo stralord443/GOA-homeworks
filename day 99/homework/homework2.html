@@ -1,0 +1,74 @@
+<!-- 3) Target Click Game
+შექმენი თამაში, სადაც ღილაკზე დაჭერის შემდეგ გარკვეული დროის მერე ეკრანზე შემთხვევით ადგილას ჩნდება წრე.
+მომხმარებელმა უნდა დააჭიროს წრეს რაც შეიძლება სწრაფად. დააჭერის შემდეგ ეკრანზე უნდა გამოჩნდეს რეაქციის დრო მილიწამებში. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex flex-col items-center justify-center bg-gray-100 overflow-hidden">
+
+    <button id="startBtn"
+        class="px-6 py-3 bg-blue-500 text-white rounded-xl shadow-lg hover:bg-blue-600 transition mb-6">Start Game
+    </button>
+
+    <div id="gameArea" class="relative w-full h-full"></div>
+
+    <p id="result" class="absolute top-14 text-xl font-semibold text-gray-700"></p>
+
+    <script>
+        const startBtn = document.getElementById("startBtn");
+        const gameArea = document.getElementById("gameArea");
+        const result = document.getElementById("result");
+
+        let startTime;
+
+        function getRandomPosition(size) {
+            const maxX = window.innerWidth - size
+            const maxY = window.innerHeight - size
+        return {
+            x: Math.random() * maxX,
+            y: Math.random() * maxY
+        };
+    }
+
+        startBtn.addEventListener("click", () => {
+            result.textContent = ""
+            startBtn.disabled = true
+
+        const delay = Math.random() * 2000 + 1000
+
+        setTimeout(() => {
+            const circle = document.createElement("div")
+
+            const size = 80
+            const pos = getRandomPosition(size)
+
+        circle.className = "absolute rounded-full bg-red-500 cursor-pointer"
+        circle.style.width = size + "px"
+        circle.style.height = size + "px"
+        circle.style.left = pos.x + "px"
+        circle.style.top = pos.y + "px"
+
+        gameArea.appendChild(circle)
+
+        startTime = new Date()
+
+        circle.addEventListener("click", () => {
+            const endTime = new Date()
+            const reactionTime = endTime - startTime
+
+            result.textContent = `რეაქციის დრო: ${reactionTime} ms`
+
+                circle.remove()
+                startBtn.disabled = false
+            })
+        }, delay)
+    });
+</script>
+</body>
+</html>

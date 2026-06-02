@@ -1,0 +1,52 @@
+<!-- 4) შექმენი responsive sidebar layout:
+
+Desktop-ზე sidebar ფიქსირებული იყოს მარცხნივ (fixed)
+Content-ს ჰქონდეს ml-64
+Mobile-ზე sidebar იყოს -translate-x-full და ღილაკზე დაჭერისას გამოჩნდეს
+
+Sidebar-ს ჰქონდეს smooth transition (transition-all duration-300)
+დამატებითი პირობა: აქტიურ მენიუს ელემენტს ჰქონდეს განსხვავებული ფონი და მარცხენა border (border-l-4). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="flex">
+  <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+  <aside
+    class="fixed top-0 left-0 h-full w-64 bg-gray-800 text-white transform -translate-x-full
+    peer-checked:translate-x-0 lg:translate-x-0 transition-all duration-300">
+
+    <div class="p-6 text-2xl font-bold border-b border-gray-700">Logo</div>
+    <nav class="p-4 space-y-2">
+      <a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:border-l-4 hover:border-blue-500">Dashboard</a>    
+      <a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:border-l-4 hover:border-blue-500">Users</a>
+      <a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:border-l-4 hover:border-blue-500">Settings</a>
+      <a href="#" class="block px-4 py-2 hover:bg-gray-700 hover:border-l-4 hover:border-blue-500">Reports</a>
+    </nav>
+  </aside>
+
+  <div class="flex-1 lg:ml-64">
+
+    <header class="p-4 bg-gray-100 lg:hidden">
+      <label for="menu-toggle" class="px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer">Menu</label>
+    </header>
+
+    <main class="p-6">
+      <h1 class="text-3xl font-bold mb-4">Content Area</h1>
+      <p>
+        Desktop-ზე sidebar ფიქსირებულია, ხოლო mobile-ზე ღილაკით იხსნება.
+      </p>
+    </main>
+
+  </div>
+
+</div>
+</body>
+</html>

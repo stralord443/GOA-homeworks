@@ -1,0 +1,27 @@
+<!-- 4) შექმენი რიცხვების მასივი -10, -3, 0, 4, 7, 12.
+filter მეთოდით მოაშორე ნულზე ნაკლები რიცხვები,
+map მეთოდით თითოეულ დარჩენილ რიცხვს გამოაკელი 1,
+filter მეთოდით დატოვე მხოლოდ კენტი რიცხვები
+და forEach მეთოდით დაბეჭდე ისინი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    const numbers = [-10, -3, 0, 4, 7, 12]
+    const nonNegative = numbers.filter(num => num >= 0)
+    const minusOne = nonNegative.map(num => num - 1)
+    const oddNumbers = minusOne.filter(num => num % 2 !== 0)
+
+    oddNumbers.forEach(num => {
+        console.log(num)
+    })
+    </script>
+</body>
+</html>

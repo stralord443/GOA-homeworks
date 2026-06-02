@@ -1,0 +1,39 @@
+<!-- 2) შექმენი BankAccount კლასი.
+მონაცემები: ბალანსი (balance)
+ლოგიკა (withdraw მეთოდში):
+თუ თანხა > ბალანსი ->"არასაკმარისი თანხა"
+თუ თანხა > 500 ->2% საკომისიო
+სხვა შემთხვევაში ->1%
+ბოლოს განაახლე ბალანსი და დააბრუნე შედეგი -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class BankAccount{
+            constructor(balance){
+                this.balance = balance
+            }
+
+            withdrow(){
+                let balance = this.balance
+
+                if(balance <= 0){
+                    return "Insufficient balance"
+                }else if (balance >= 500){
+                    return balance *= 1.02
+                }else{
+                    return balance *= 1.01
+                }
+            }
+        }
+        const bankAccount = new BankAccount(200)
+        console.log(bankAccount.withdrow())
+    </script>
+</body>
+</html>

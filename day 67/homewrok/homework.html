@@ -1,0 +1,27 @@
+<!-- 2) კომენტარების სახით ახსენიტ რა არის DOM და რისთვის გამოიყენება. -->
+
+<!-- dom: Document Object Model, used to give access to js for our document -->
+
+<!-- 3) შექმენი <div id="box"></div>.
+JavaScript-ში getElementById-ით წამოიღე ეს div-ი და დაუმატე:
+სიგანე 150px, სიმაღლე 150px, ფონი ლურჯი და ოდნავ მომრგვალებული კუთხეები. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        item1
+    </div>
+    <script>
+        document.getElementById("box").style.height="150px"
+        document.getElementById("box").style.width="150px"
+        document.getElementById("box").style.backgroundColor="blue"
+        document.getElementById("box").style.borderRadius="5px"
+    </script>
+</body>
+</html>
+

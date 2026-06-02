@@ -1,0 +1,36 @@
+<!-- 5) შექმენი კლასი User, რომელსაც ექნება name. შექმენი კლასი Admin, რომელიც extends User-ს. 
+დაამატე static მეთოდი isAdmin(user), რომელიც ამოწმებს არის თუ არა გადაცემული ობიექტი Admin-ის instance. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(name) {
+            this.name = name
+        }
+    }
+
+        class Admin extends User {
+            constructor(name) {
+            super(name)
+        }
+
+    static isAdmin(user) {
+        return user instanceof Admin
+        }
+    }
+
+    const user1 = new User("Givi")
+    const admin1 = new Admin("Nika")
+
+    console.log(Admin.isAdmin(user1))
+    console.log(Admin.isAdmin(admin1))
+    </script>
+</body>
+</html>

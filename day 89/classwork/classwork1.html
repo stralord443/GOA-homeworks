@@ -1,0 +1,27 @@
+<!-- function fn(st, nd, o) {
+ // ...
+}
+
+fn('Gio', 'Luka', 'Andria', 'Ioane', 'Nodi') -->
+
+<!-- 4. აქიდან, გამოიტანეთ შედეგი შემდეგი ფორმატით: 
+1. Gio 2. Luka 3.Andria other Ioane, Nodi -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let names =['Gio', 'Luka', 'Andria', 'Ioane', 'Nodi']
+        let [a,b,c, ...other] = names
+
+        console.log(a,b,c, other)
+    
+    </script>
+</body>
+</html>

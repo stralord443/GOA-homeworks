@@ -1,0 +1,29 @@
+<!-- 4) შექმენი p ელემენტი და ::after-ით დაამატე ბლოკი, რომლის მარცხენა დაშორება იქნება calc(50% - 25px). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        p{
+            position: relative;
+            background-color: blue;
+            height: 50px;
+            width: 120px;
+        }
+        p::after{
+            content: "";
+            position: absolute;
+            background-color: aqua;
+            left: calc(50% - 25px);
+            height: 100%;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

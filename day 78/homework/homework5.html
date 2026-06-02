@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 6) შექმენი რიცხვების მასივი 2, 4, 6, 8, 10, 12.
+    თითოეული რიცხვი გაზარდე 3-ჯერ,
+    დატოვე მხოლოდ ის შედეგები, რომლებიც 20-ს არ აღემატება,
+    გამოთვალე მათი ჯამი
+    და დაბეჭდე ყველაზე პატარა მიღებული რიცხვი. -->
+
+    <script>
+        let number = [2,4,6,8,10,12]
+        let tripple = number.map(num => num * 3)
+        let filtered = tripple.filter(num => num < 20)
+        let sum = filtered.reduce((acc, curr) => acc + curr, 1)
+        console.log(filtered)
+    </script>
+
+</body>
+</html>

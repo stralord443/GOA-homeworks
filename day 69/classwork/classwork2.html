@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4) შექმენი რამდენიმე <span> ელემენტი ტექსტისთვის. getElementsByTagName-ით
+         წამოიღე ყველა span და მათზე განახორციელე ერთნაირი ტექსტის ზომა და ფერის ცვლილება. -->
+    <span>ტექსტი 1</span>
+    <span>ტექსტი 2</span>
+    <span>ტექსტი 3</span>
+    <span>ტექსტი 4</span>
+
+    <script>
+   
+    const spans = document.getElementsByTagName("span");
+
+ 
+    for (let i = 0; i < spans.length; i++) {
+      spans[i].style.fontSize = "20px";
+      spans[i].style.color = "purple";
+    }
+
+  </script>
+</body>
+</html>

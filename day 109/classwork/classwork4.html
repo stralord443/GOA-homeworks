@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 5) შექმენი კლასები Employee და Manager, სადაც Manager მემკვიდრეობს Employee-ს. შექმენი manager object და instanceof-ის
+// გამოყენებით if statement-ში შეამოწმე არის თუ არა object Manager-ის instance. თუ true იქნება, კონსოლში გამოიტანე:
+// "Manager panel opened"  ეს დაწერე ინეტრსეზვე იყოს
+
+    class Employee {
+        constructor(name) {
+            this.name = name;
+        }
+    }
+
+    class Manager extends Employee {
+        constructor(name) {
+            super(name);
+        }
+    }
+
+    const manager = new Manager("Givi");
+
+    if (manager instanceof Manager) {
+        console.log("Manager panel opened");
+    }
+    </script>
+</body>
+</html>

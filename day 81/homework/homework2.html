@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3) მოცემულია თამაშის მოთამაშეების სია, სადაც თითოეულ მოთამაშეს აქვს 
+    სახელი და მოგებული ქულები. დაწერეთ პროგრამა, რომელიც იპოვის მოთამაშეს,
+    რომელსაც ყველაზე ნაკლები ქულა აქვს. ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით. -->
+
+    <script>
+        let player = [            
+            { name: 'Nino', score: 85 },
+            { name: 'Giorgi', score: 92 },
+            { name: 'Mariam', score: 78 },
+            { name: 'Luka', score: 92 }
+        ]
+
+        let lowest = player.reduce((acc,curr)=>{
+            return curr.score < acc.score ? curr : acc
+        })
+
+        console.log(lowest)
+        //         const topStudent = students.reduce((best, current) => {
+        //     return current.score > best.score ? current : best
+        // })
+    </script>
+</body>
+</html>

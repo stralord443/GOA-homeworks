@@ -1,0 +1,30 @@
+<!-- 4) შექმენი გვერდის layout sidebar-ით. გამოიყენე flex. Sidebar-ს
+ მიეცი w-64, min-h-screen, განსხვავებული ფონი და მენიუს ელემენტებს 
+ დაუმატე hover:bg-gray-200 და cursor-pointer. მთავარი კონტენტი იყოს flex-1 p-6. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="flex">
+    <aside class="w-64 min-h-screen bg-gray-300 p-4">
+        <nav class="space-y-2">
+            <div class="p-2 rounded hover:bg-gray-200 cursor-pointer">მენიუ 1</div>
+            <div class="p-2 rounded hover:bg-gray-200 cursor-pointer">მენიუ 2</div>
+            <div class="p-2 rounded hover:bg-gray-200 cursor-pointer">მენიუ 3</div>
+            <div class="p-2 rounded hover:bg-gray-200 cursor-pointer">მენიუ 4</div>
+        </nav>
+    </aside>
+
+    <main class="flex-1 p-6 bg-white">
+        <h1 class="text-2xl font-bold mb-4">მთავარი კონტენტი</h1>
+        <p>ეს არის მთავარი კონტენტის ნაწილი, რომელიც Sidebar-ის გვერდით განლაგებულია.</p>
+    </main>
+</div>
+</body>
+</html>

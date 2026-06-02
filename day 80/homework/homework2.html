@@ -1,0 +1,29 @@
+<!-- 3) მოცემულია მოსწავლეთა სია, სადაც თითოეულ მოსწავლეს აქვს სახელი და ქულა.
+დაწერეთ პროგრამა, რომელიც იპოვის იმ მოსწავლეს, ვისაც ყველაზე მაღალი ქულა აქვს.
+ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let students = [
+            { name: 'Nino', score: 85 },
+            { name: 'Giorgi', score: 92 },
+            { name: 'Mariam', score: 78 },
+            { name: 'Luka', score: 92 }
+        ]
+
+        const topStudent = students.reduce((best, current) => {
+            return current.score > best.score ? current : best
+        })
+
+        console.log(topStudent);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- 3) შექმენი class Student, რომლის constructor იღებს name, ხოლო grade-ს აყენებს default-ად 0. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Student {
+        constructor(name, grade = 0) {
+            this.name = name
+            this.grade = grade
+        }
+    }   
+    
+    const s1 = new Student("Nino")
+    console.log(s1.grade)
+
+    const s2 = new Student("Luka", 95)
+    console.log(s2.grade)
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) შექმენი რიცხვების მასივი 3, 6, 9, 12, 15, 18.
+    თითოეული რიცხვი გაზარდე ორჯერ,
+    დატოვე მხოლოდ ის შედეგები, რომლებიც 20-ზე მეტია,
+    იპოვე მათი ჯამი
+    და ბოლოს დაბეჭდე რამდენი რიცხვი დარჩა. -->
+
+    <script>
+        let num = [3,6,9,12,15,18]
+        let dubble = num.map(num => num * 2)
+        let filtered = dubble.filter(num => num > 20)
+        let sum = filtered.reduce((acc, curr) => acc + curr, 0)
+        let len = filtered.length
+        console.log(len)
+    </script>
+</body>
+</html>

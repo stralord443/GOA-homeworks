@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 7) შექმენი რიცხვების მასივი 1, 5, 10, 15, 20.
+    თითოეულ რიცხვს გამოაკელი 1,
+    დატოვე მხოლოდ ის შედეგები, რომლებიც 10-ზე მეტია,
+    დაალაგე მიღებული რიცხვები კლებადობით
+    და ეკრანზე გამოიტანე ყველა ელემენტი. -->
+
+    <script>
+        let number = [1,5,10,15,20]
+        let minus = number.map(num => num - 1)
+        let filtered = minus.filter(num => num > 10)
+        let sorted = filtered.sort((a, b) => b - a)
+        console.log(sorted)
+    </script>
+</body>
+</html>

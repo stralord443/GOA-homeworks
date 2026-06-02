@@ -1,0 +1,41 @@
+<!-- 2) შექმენი კლასი TikTokAccount, რომელსაც ექნება public მეთოდი postVideo().
+ამ მეთოდის გამოძახებისას უნდა გაეშვას private მეთოდები:
+#selectVideo()
+#addMusic()
+#upload() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class TikTokAccount {
+            postVideo() {
+                this.#selectVideo()
+                this.#addMusic()
+                this.#upload()
+    }
+
+    #selectVideo() {
+        console.log("Selecting video...")
+    }
+
+    #addMusic() {
+        console.log("Adding music...")
+    }
+
+    #upload() {
+        console.log("Uploading video...")
+    }
+}
+
+    const account = new TikTokAccount()
+
+    account.postVideo()
+    </script>
+</body>
+</html>

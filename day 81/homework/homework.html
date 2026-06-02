@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) მოცემულია წიგნების ავტორების მასივი. დაწერეთ პროგრამა, რომელიც 
+    დააჯგუფებს ავტორებს და დაითვლის რამდენი წიგნი აქვს თითოეულ ავტორს. 
+    შედეგი შეინახეთ ობიექტში. ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით. -->
+
+    <script>
+        let author = ["J.K. Rowling","William Shakespeare","Agatha Christie","J.K. Rowling","William Shakespeare"]
+
+        let authors = author.reduce((acc, curr) => {
+            acc[curr]= (acc[curr] || 0) + 1
+            return acc
+        },{})
+        console.log(authors)
+    </script>
+</body>
+</html>

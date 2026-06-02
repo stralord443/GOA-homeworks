@@ -1,0 +1,36 @@
+<!-- 5) შექმენი button-ების ჯგუფი (3 ღილაკი), სადაც თითოეულს ექნება განსხვავებული ფერი (primary, secondary, accent).
+ დაამატე hover, active (scale down) და transition ეფექტები. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#6366f1',
+                    secondary: '#10b981',
+                    accent: '#f59e0b'
+                },
+                borderRadius: {
+                    xl2: '20px'
+                }
+            }
+        }
+    }
+</script>
+</head>
+<div class="flex gap-4 justify-center mt-10">
+    <button class="px-6 py-2 bg-primary text-white rounded-xl2 shadow-mdhover:bg-indigo-700 hover:shadow-lg
+                active:scale-95 transition duration-200">Primary</button>
+    <button class="px-6 py-2 bg-secondary text-white rounded-xl2 shadow-md hover:bg-emerald-600 hover:shadow-lg
+                active:scale-95 transition duration-200">Secondary</button>
+    <button class="px-6 py-2 bg-accent text-white rounded-xl2 shadow-mdhover:bg-amber-500 hover:shadow-lg
+                active:scale-95 transition duration-200">Accent</button>
+</div>
+</html>

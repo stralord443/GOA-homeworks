@@ -1,0 +1,30 @@
+<!-- 4) შექმენი სათაური (h2) და ::after-ით ქვემოთ გაუკეთე ხაზის იმიტაცია (underline), რეალური border-ის გარეშე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h2 {
+        position: relative;
+        display: inline-block;
+        font-size: 28px;
+    }
+
+    h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background-color: #ff5733;
+    }
+    </style>
+</head>
+<body>
+    <h2>header tag</h2>
+</body>
+</html>

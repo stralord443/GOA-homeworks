@@ -1,0 +1,52 @@
+4) შექმენი BankAccount კლასი.
+ქონდეს:
+- balance
+
+getter აბრუნებდეს ბალანსს.
+setter არ აძლევდეს უფლებას ბალანსი გახდეს უარყოფითი.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 4) შექმენი BankAccount კლასი.
+// ქონდეს:
+// - balance
+
+// getter აბრუნებდეს ბალანსს.
+// setter არ აძლევდეს უფლებას ბალანსი გახდეს უარყოფითი.
+
+    class BankAccount {
+        constructor(balance) {
+            this.balance = balance
+        }
+
+    get balance() {
+        return this._balance
+    }
+
+    set balance(value) {
+        if (value >= 0) {
+            this._balance = value
+        } else {
+            console.log("ბალანსი არ შეიძლება იყოს უარყოფითი")
+        }
+    }
+}
+
+    const account1 = new BankAccount(500)
+
+    console.log(account1.balance)
+
+    account1.balance = -100
+    account1.balance = 800
+
+    console.log(account1.balance)
+    </script>
+</body>
+</html>

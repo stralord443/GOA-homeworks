@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3) შექმენი სამი div ელემენტი კლასით card-item. getElementsByClassName-ით წამოიღე ისინი და:
+    A.პირველს მიანიჭე წითელი ფონური ფერი
+    B.მეორეს ცისფერი
+    C.მესამეს ნარინჯისფერი -->
+
+    <div class="card-item">1</div>
+    <div class="card-item">2</div>
+    <div class="card-item">3</div>
+
+    <script>
+        const cards = document.getElementsByClassName("card-item")
+
+        cards[0].style.backgroundColor="red"
+        cards[1].style.backgroundColor="skyblue"
+        cards[2].style.backgroundColor="orange"
+    </script>
+
+</html>

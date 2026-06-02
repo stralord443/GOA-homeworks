@@ -1,0 +1,31 @@
+<!-- 2) შექმენი კლასი User, რომელსაც ექნება name და email. დაამატე მეთოდი changeEmail(newEmail),
+ რომელიც შეცვლის მომხმარებლის ემაილს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(name, email) {
+                this.name = name
+                this.email = email
+        }
+
+        changeEmail(newEmail) {
+            this.email = newEmail
+        }
+    }
+
+    const user1 = new User("Givi", "givi@example.com")
+    console.log(user1.email)
+
+    user1.changeEmail("newgivi@example.com")
+    console.log(user1.email)
+    </script>
+</body>
+</html>

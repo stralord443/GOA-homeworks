@@ -1,0 +1,63 @@
+<!-- 1) შექმენი კლასი User, რომელსაც ექნება name. დაამატე static property count. კონსტრუქტორში გაზარდე count.
+შექმენი კლასი Admin, რომელიც extends User-ს და გამოიყენე super. შეამოწმე რამდენი ობიექტი შეიქმნა.
+შექმენი კლასი Vehicle, რომელსაც ექნება brand. დაამატე static მეთოდი compare(v1, v2) (შეადაროს ბრენდები).
+შექმენი კლასი Car, რომელიც extends Vehicle-ს და გამოიყენე super. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+            static count = 0 //let count = 0
+
+        constructor(name) {
+            this.name = name
+            User.count++
+        }
+    }
+
+        class Admin extends User {
+            constructor(name) {
+            super(name)
+        }
+    }
+
+    const u1 = new User("Givi")
+    const u2 = new User("Nika")
+    const a1 = new Admin("Luka")
+
+    console.log("შექმნილი ობიექტების რაოდენობა:", User.count)
+
+
+// part 2
+
+    class Vehicle {
+        constructor(brand) {
+            this.brand = brand
+    }
+
+    static compare(v1, v2) {
+        return v1.brand === v2.brand
+        }
+    }
+
+    class Car extends Vehicle {
+        constructor(brand) {
+            super(brand)
+        }
+    }
+
+    const car1 = new Car("BMW")
+    const car2 = new Car("Mercedes")
+    const car3 = new Car("BMW")
+
+    console.log(Vehicle.compare(car1, car2))
+    console.log(Vehicle.compare(car1, car3))
+    </script>
+</body>
+</html>

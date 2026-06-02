@@ -1,0 +1,27 @@
+<!-- 7)Contact Mini Form
+შექმენი პატარა ფორმა სახელისა და შეტყობინების input ველებით
+გაგზავნისას გვერდი არ უნდა გადატვირთოს
+უნდა გამოჩნდეს alert ტექსტით Message sent successfully
+გამოიყენე submit event და preventDefault. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter your name" required> <br>
+    <input type="text" placeholder="enter your message" required>
+    <br> <br>
+    <button id="btn">click me</button>
+
+    <script>
+        const btn = document.querySelector("#btn")
+
+        btn.addEventListener("click", function(){
+            alert("you message has been sent!")})
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- 8) შექმენი ბარათი (div.card) და ::before-ით ზედა კუთხეში დაამატე პატარა ლენტი (ribbon) წარწერით “SALE”. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .card {
+        position: relative;
+        width: 250px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+        font-family: sans-serif;
+    }
+
+    .card::before {
+        content: "SALE";
+        position: absolute;
+        top: 12px;
+        left: -35px;
+        background: red;
+        color: white;
+        padding: 4px 40px;
+        font-size: 14px;
+        font-weight: bold;
+        transform: rotate(-45deg);
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h3>product</h3>
+        <p>short explain</p>
+    </div>
+</body>
+</html>

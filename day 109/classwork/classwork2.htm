@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 3) შექმენი კლასები Appliance, TV და Fridge, სადაც TV და Fridge მემკვიდრეობენ Appliance-ს. შექმენი tv და fridge object-ები და
+// instanceof-ის გამოყენებით შეამოწმე:
+// არის თუ არა tv → TV-ის instance
+// არის თუ არა tv → Appliance-ის instance
+// არის თუ არა fridge → TV-ის instance.
+
+    class Appliance {
+        constructor(name) {
+            this.name = name
+        }
+    }
+
+    class TV extends Appliance {
+        constructor(name) {
+            super(name)
+    }
+    }
+
+    class Fridge extends Appliance {
+        constructor(name) {
+            super(name)
+    }
+    }
+
+    const tv = new TV("Samsung TV")
+    const fridge = new Fridge("LG Fridge")
+
+    console.log(tv instanceof TV)
+    console.log(tv instanceof Appliance)
+    console.log(fridge instanceof TV)
+    </script>
+</body>
+</html>

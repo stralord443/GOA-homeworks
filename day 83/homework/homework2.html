@@ -1,0 +1,27 @@
+<!-- 4) მოცემულია მასივი:
+[10, 20, 30, 40, 50]
+დესტრუქტურინგის გამოყენებით:=
+აიღე პირველი ორი ელემენტი
+დანარჩენი შეინახე ცალკე მასივში -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let list1 = [10, 20, 30, 40, 50]
+        let list2 = [] 
+
+        let [a,b,c,d,e] = list1
+        list2.push(c,d,e)
+
+        console.log(a,b)
+        console.log(list2)
+    </script>
+</body>
+</html>

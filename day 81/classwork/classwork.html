@@ -1,0 +1,27 @@
+<!-- 1) მოცემულია პროდუქტების კატეგორიების მასივი (მაგ: "ტექნიკა", "ტანსაცმელი", 
+"ტექნიკა", "საკვები" და ა.შ). დაწერეთ პროგრამა, რომელიც დაითვლის რამდენი პროდუქტი ეკუთვნის
+თითოეულ კატეგორიას და შედეგს შეინახავს ობიექტში. ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const categories = ["ტექნიკა", "ტანსაცმელი", "ტექნიკა", "საკვები", "ტანსაცმელი", "ტექნიკა"]
+
+        const results =categories.reduce ((acc, curr)=>{
+            if (acc[curr]){
+                acc[curr]++
+            }else {
+                acc[curr] = 1
+            }
+            return acc
+        } , {})
+        console.log(results)
+    </script>
+</body>
+</html>

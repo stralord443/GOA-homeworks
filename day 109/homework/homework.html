@@ -1,0 +1,46 @@
+<!-- 1) შექმენი კლასი YouTubeChannel, რომელსაც ექნება public მეთოდი uploadVideo().
+ამ მეთოდის გამოძახებისას უნდა გაეშვას private მეთოდები:
+#checkVideo()
+#addTitle()
+#publishVideo()
+საბოლოოდ კონსოლში უნდა გამოიტანოს:
+"Video uploaded successfully" -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class YouTubeChannel {
+            uploadVideo() {
+                this.#checkVideo()
+                this.#addTitle()
+                this.#publishVideo()
+
+        console.log("Video uploaded successfully")
+    }
+
+    #checkVideo() {
+        console.log("Checking video")
+    }
+
+    #addTitle() {
+        console.log("Adding title")
+    }
+
+    #publishVideo() {
+        console.log("Publishing video")
+    }
+}
+
+    const channel = new YouTubeChannel()
+
+    channel.uploadVideo()
+    </script>
+</body>
+</html>

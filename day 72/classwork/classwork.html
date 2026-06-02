@@ -1,0 +1,59 @@
+<!-- 1) შექმენი div, რომელიც გვერდის ჩატვირთვისას ნელა გამოჩნდება — 
+ანიმაცია უნდა დაიწყოს opacity: 0-ით და დასრულდეს opacity: 1-ზე,
+ხანგრძლივობა იყოს დაახლოებით 1 წამი. ბონუსად შეგიძლია დაამატო, 
+რომ ტექსტი ან ბლოკი ოდნავ ქვემოდან ამოვიდეს translateY(20px)-დან translateY(0)-მდე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards, floatUpDown 2s ease-in-out infinite;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 2) შემდეგ გააკეთე ღილაკი, რომელიც მაუსის გადატარებისას ოდნავ გაიზრდება (scale(1.1)),
+    და ეს ცვლილება იყოს რბილი transition-ის დახმარებით, დაახლოებით 0.3 წამში. */
+
+    .fade-in:hover{
+        scale: 1.1;
+        transition: 0.3s;
+    }
+
+    /* 3) ამის შემდეგ შექმენი წრე, რომელიც უსასრულოდ ხტუნავს — მოძრაობა უნდა იყოს ზემოთ
+    და ქვემოთ (translateY(0 → -40px → 0)), შესრულდეს @keyframes-ით და იმეორებდეს უსასრულოდ. */
+    
+        @keyframes floatUpDown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(40px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+    </style>
+</head>
+<body>
+    <div class="fade-in">
+        ეს არის ბლოკი, რომელიც ნელა ჩნდება გვერდის ჩატვირთვისას
+    </div>
+</body>
+</html>

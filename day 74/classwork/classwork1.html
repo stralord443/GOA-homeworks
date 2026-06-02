@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        .div1{
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: aquamarine;
+            animation: bounce 2s ease-in-out infinite;
+            /* 4) ასევე bounce ანიმაცია ჩამოსვლისას იყოს სწრაფი ასვლისას ნელი */
+            
+        }
+        @keyframes bounce{
+            0% {
+                transform: translateY(0) scaleX(1.2) scaleY(0.9);
+            }
+            50% {
+                transform: translateY(120px) scaleX(0.9) scaleY(1.05);
+            }
+            100% {
+            transform: translateY(0) scaleX(1.2) scaleY(0.9);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 3) bounce-ის დროს შეცვალე: 
+    ქვემოთ ჩამოსვლისას scaleX გაიზრდოს და ზემოთ ასვლისას დაპატარავდეს -->
+
+    <div class="div1"></div>
+</body>
+</html>

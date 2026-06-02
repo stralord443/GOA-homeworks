@@ -1,0 +1,26 @@
+<!-- 5) შექმენი რიცხვების მასივი 6, 9, 12, 15, 18.
+map მეთოდით თითოეული რიცხვი გაამრავლე 4-ზე,
+reduce მეთოდით იპოვე საშუალო არითმეტიკული,
+Math.round()-ის გამოყენებით დაამრგვალე შედეგი
+და დაბეჭდე საბოლოო პასუხი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+const numbers = [6, 9, 12, 15, 18]
+const multiplied = numbers.map(num => num * 4)
+const sum = multiplied.reduce((acc, num) => acc + num, 0)
+const average = sum / multiplied.length
+const rounded = Math.round(average)
+
+console.log("საბოლოო პასუხი:", rounded)
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- 3. მოცემულია ფუნქცია, აქიდან დაწერეთ კოდი, რომელიც მიღებული არგუმენტებით მიგვაღებინებს მსგავს შედეგს 
+(უნდა დააბრუნოს ფუნქციამ):
+ 
+{
+    username: 'vashli123',
+    password: '12345678',
+    more: 'mwvane vashlis moyvaruli'
+};
+function signup(email, password, more) {
+    const user = {};
+    return user;
+}
+
+signup('emaili', '12345678', 'mwvane_vashlis_moyvaruli'); -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    function signup(username, password, more) {
+        const user = {
+            username: username,
+            password: password,
+            more: more.replaceAll('_', ' ')
+        };
+    
+    return user;
+}
+
+    console.log(signup('vashli123', '12345678', 'mwvane_vashlis_moyvaruli'));
+    </script>
+</body>
+</html>

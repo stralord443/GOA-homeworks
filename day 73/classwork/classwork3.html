@@ -1,0 +1,25 @@
+<!-- 4) შექმენი p  თაგი და შეცვალე ელემენტის ტექსტი ღილაკზე დაჭერის შედეგად. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Change</title>
+</head>
+<body>
+    
+    <p id="text">ეს არის საწყისი ტექსტი</p>
+    <button id="btn">დააჭირე</button>
+
+
+    <script>
+        const text = document.getElementById("text")
+        const button = document.getElementById("btn")
+
+        button.addEventListener("click", function () {
+        text.textContent = "ტექსტი შეიცვალა ღილაკზე დაჭერის შედეგად"
+    })
+</script>
+</body>
+</html>

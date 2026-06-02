@@ -1,0 +1,70 @@
+<!-- 5 შექმენი თამაში სადაც ეკრანზე ჩნდება რიცხვები არეულად 1 დან 10 მდე მომხმარებელმა უნდა დააჭიროს სწორ რიგში ბოლოს
+  გამოიტანე დრო და შეცდომები. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center h-screen">
+
+  <h1 class="text-3xl mb-4">Click Numbers in Order (1 → 10)</h1>
+
+  <div id="game" class="grid grid-cols-5 gap-4 mb-6"></div>
+  <div id="result" class="text-xl"></div>
+
+<script>
+    const game = document.getElementById("game");
+    const result = document.getElementById("result");
+
+    let numbers = []
+    for (let i = 1; i <= 10; i++) {
+        numbers.push(i)
+    }
+
+
+    function shuffleArray(arr) {
+        let copy = [...arr];
+  
+    for (let i = copy.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1))
+    }
+  return copy
+}
+
+    newnum = shuffleArray(numbers)
+
+    let current = 1
+    let startTime = null
+
+    newnum.forEach(num => {
+        const btn = document.createElement("button")
+        btn.textContent = num
+        btn.className = "bg-blue-500 hover:bg-blue-700 w-16 h-16 text-xl rounded";
+
+        btn.onclick = () => {
+            if (!startTime) startTime = Date.now()
+
+            if (num === current) {
+                btn.classList.add("bg-green-500")
+                btn.disabled = true
+                current++
+
+            if (current > 10) {
+                let time = ((Date.now() - startTime))
+                result.textContent = `Finished! Time: ${time}ms`
+            }
+        } else {
+            btn.classList.add("bg-red-500")
+            setTimeout(() => btn.classList.remove("bg-red-500"), 300)
+        }
+    }
+
+    game.appendChild(btn)
+})
+</script>
+</body>
+</html>

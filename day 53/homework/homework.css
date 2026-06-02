@@ -1,0 +1,25 @@
+/* 1) კომენტარების სახით ახსენით z-index */
+
+/* allows to put one element above another one */
+
+/* 2) შექმენი ორი დივი, ორივე 100×100px.
+მოათავსე ისე, რომ ერთი იყოს მეორეზე ნახევრად.
+დაალაგე ისე, რომ წითელი იყოს ზემოთ. */
+
+.div1{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: absolute;
+    z-index: 1;
+}
+.div2{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+    
+}

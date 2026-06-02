@@ -1,0 +1,21 @@
+<!-- 2) შექმენი ღილაკი.
+როდესაც მაუსს მიიტან მთელ ღილაკზე:
+icon ოდნავ გადაადგილდეს მარჯვნივ
+ტექსტი გახდეს უფრო მუქი
+გამოიყენე group-hover. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <button class="group flex items-center gap-2 px-6 py-3 bg-gray-200 rounded-lg">
+        <div class="font-medium text-gray-600 0 group-hover:text-gray-900">Learn More</div>
+        <div class=" group-hover:translate-x-1">right</div>
+    </button>
+</body>
+</html>

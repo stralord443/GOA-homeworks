@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) შექმენი HTML-ში ერთი <h1> ელემენტი id="title"-ით. JavaScript-ში getElementById-ით წამოიღე ეს 
+        ელემენტი და გამოიყანეთ საიტზე. -->
+
+    <h1 id="title">text 1</h1>
+
+    <script>
+        const text1= document.getElementById("title")
+        console.log(text1)
+    </script>
+
+    <!-- 2) შექმენი 3 <p> ელემენტი ერთნაირი class="text"-ით. getElementsByClassName-ით
+         და getElementsByTagName-ით წამოიღეთ და გამოიტანეთ Console-ში.  -->
+
+    <p class="text">text1</p>
+    <p class="text">text2</p>
+    <p class="text">text3</p>
+
+    <script>
+        console.log(document.getElementsByClassName("text"))
+        console.log(document.getElementsByTagName("p"))
+    </script>
+    
+    <!-- 3) კომენტარების სახით ახსენი როგორ იშიფრება DOM. -->
+
+    <!-- Document Object Model -->
+
+    <!-- 4) შექმენი <div id="box"></div>. JavaScript-ში getElementById-ით წამოიღე ეს div-ი და დაუმატე სიგანე,
+     სიმაღლე და ფონი (მაგალითად: width 100px, height 100px, backgroundColor red). -->
+
+    <div id="box"></div>
+
+    <script>
+        document.getElementById("box").style.width="100px"
+        document.getElementById("box").style.height="100px"
+        document.getElementById("box").style.backgroundColor="red"
+    </script>
+
+    <!-- 5) შექმენი ერთი ღილაკი და ერთი ტექსტი (<p>). JavaScript-ში წამოიღე 
+        ტექსტი id-ით და პირდაპირ კოდში (click-ის გარეშე) გაუკეთე სტილები: ფერი, ფონტი და ზომა. -->
+    
+    <button id="butt"><p>button</p></button>
+
+    <script>
+        document.getElementById("butt").style.width="120px"
+        document.getElementById("butt").style.height="80px"
+        document.getElementById("butt").style.backgroundColor="blue"
+    </script>
+    
+</body>
+</html>
+

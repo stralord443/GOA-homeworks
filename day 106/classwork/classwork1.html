@@ -1,0 +1,55 @@
+<!-- 3) ახსენი რას ნიშნავს, როცა ვამბობთ:
+“ობიექტის მონაცემების დაცვა” -->
+
+<!-- ობიექტის ინფორმაცია დამალულუა -->
+
+<!-- 4) შექმენი BankAccount კლასი:
+owner balance
+და დაამატე:
+deposit(amount)
+withdraw(amount)
+მეთოდები. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class BankAccount {
+            constructor(owner, balance = 0) {
+            this.owner = owner
+            this.balance = balance
+        }
+
+    deposit(amount) {
+        if (amount <= 0) {
+            return "Deposit amount must be positive"
+    }
+        this.balance += amount;
+        return `New balance: ${this.balance}`
+    }
+
+    withdraw(amount) {
+        if (amount <= 0) {
+            return "Withdraw amount must be positive"
+        }
+        if (amount > this.balance) {
+            return "Insufficient funds"
+        }
+        this.balance -= amount
+        return `New balance: ${this.balance}`
+    }
+}
+
+    const account = new BankAccount("Givi", 100)
+
+    console.log(account.deposit(50))
+    console.log(account.withdraw(30))
+    console.log(account.withdraw(500))
+    </script>
+</body>
+</html>

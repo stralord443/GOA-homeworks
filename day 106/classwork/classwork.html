@@ -1,0 +1,36 @@
+<!-- 1)რა არის Encapsulation JavaScript-ში?
+მოკლედ ახსენი შენი სიტყვებით და დაწერე, რატომ გამოიყენება OOP-ში. -->
+
+<!-- საიტზე ლოგიკის დამალვა -->
+
+<!-- 2) შექმენი User კლასი, რომელსაც ექნება:
+name
+age
+და დაამატე მეთოდი getInfo(), რომელიც დააბრუნებს ტექსტს:
+"My name is _ and I am _ years old" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+            constructor(name, age) {
+            this.name = name
+            this.age = age
+    }
+
+    getInfo() {
+        return `My name is ${this.name} and I am ${this.age} years old`
+    }
+}
+
+const user1 = new User("Givi", 20)
+console.log(user1.getInfo())
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- 5) მეორე ღილაკზე დაჭერისას classList.remove()-ით მოაშორე .red კლასი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+    .red {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+    <div id="box">hello</div>
+    <br>
+    <button onclick="addRed()">კლასის დამატება</button>
+    <button onclick="removeRed()">კლასის მოცილება</button>
+
+    <script>
+        function addRed() {
+        document.getElementById("box").classList.add("red")
+    }
+    function removeRed() {
+        document.getElementById("box").classList.remove("red")
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- 4. მუშაობს თუ არა მოცემული კოდი? ახსენით რატომ და გამოასწორეთ შეცდომა, რომ შესაბამისი შედეგი მივიღოთ
+const numbers = [1, 2, 3, 4, 5];
+const [first, ...middle, last] = numbers;
+
+console.log(middle); -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    let numbers = [1, 2, 3, 4, 5];
+
+    let [first, ...rest] = numbers;
+
+    console.log(rest)   
+    </script>
+</body>
+</html>

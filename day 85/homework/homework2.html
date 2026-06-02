@@ -1,0 +1,38 @@
+<!-- 3) შექმენით ფუნქცია, რომელიც იღებს მასივს შემდეგი სტრუქტურით:
+[
+{ title: "JS", lessons: 20 },
+{ title: "React", lessons: 35 },
+{ title: "Node", lessons: 25 }
+]
+Destructuring-ის გამოყენებით:
+პირველი კურსიდან აიღეთ title და lessons
+მეორე კურსიდან აიღეთ მხოლოდ title (rename გააკეთეთ secondCourseName)
+მესამე კურსიდან აიღეთ lessons და მიეცით default მნიშვნელობა 0
+ფუნქციამ უნდა დაბეჭდოს ყველა მიღებული მნიშვნელობა. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let list = [
+        { title: "JS", lessons: 20 },
+        { title: "React", lessons: 35 },
+        { title: "Node", lessons: 25 }
+    ]
+
+    function distruct(list){
+        let [{title,lessons},{title:secondCourseName,},{titl,lessons:lesson = 0 }] = list
+        console.log(title , lessons)
+        console.log(secondCourseName)
+        console.log(lesson)
+    }
+    distruct(list)
+    </script>
+</body>
+</html>

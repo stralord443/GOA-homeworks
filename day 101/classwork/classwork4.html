@@ -1,0 +1,25 @@
+<!-- 5) შექმენი class User, რომლის constructor იღებს username და password. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class User {
+        constructor(username, password) {
+            this.username = username
+            this.password = password
+        }
+    }
+    
+    const user1 = new User("admin", "1234")
+
+    console.log(user1.username)
+    console.log(user1.password)
+    </script>
+</body>
+</html>

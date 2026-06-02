@@ -1,0 +1,24 @@
+<!-- 8) გააკეთე card description ტექსტი.
+ტექსტი უნდა გამოჩნდეს მხოლოდ 3 ხაზამდე.
+თუ ტექსტი უფრო გრძელია:
+ბოლოში გამოჩნდეს "...".
+გამოიყენე line-clamp. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class="flex justify-center items-center min-w-screen min-h-screen">
+    <div class="max-w-sm p-4 border rounded-lg shadow">
+        <h2 class="text-lg font-semibold mb-2">Card Title</h2>
+        <p class="text-gray-900 line-clamp-3">
+            This is a long description text that might overflow the card. Tailwind makes it easy to truncate text after a certain
+            number of lines so your UI stays .clean and consistent across different content lengths.
+        </p>
+    </div>
+</body>
+</html>

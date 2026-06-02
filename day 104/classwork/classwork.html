@@ -1,0 +1,29 @@
+<!-- 1) შექმენი კლასი Car, რომელსაც ექნება properties: brand, model, year. დაამატე მეთოდი getInfo(), რომელიც დააბრუნებს
+ მანქანის სრულ ინფორმაციას ერთ სტრინგად. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car {
+            constructor(brand, model, year) {
+            this.brand = brand
+            this.model = model
+            this.year = year
+        }
+
+        getInfo() {
+            return `${this.brand} ${this.model}, ${this.year}`
+        }
+    }
+
+    const myCar = new Car("Toyota", "Corolla", 2020)
+    console.log(myCar.getInfo()) 
+    </script>
+</body>
+</html>

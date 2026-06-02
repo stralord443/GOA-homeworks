@@ -1,0 +1,45 @@
+<!-- 3) შექმენი კლასი SmartTV, რომელსაც ექნება public მეთოდი watchYouTube().
+ამ მეთოდის გამოძახებისას უნდა გაეშვას private მეთოდები:
+#connectInternet()
+#openYouTube()
+#playVideo()
+საბოლოოდ კონსოლში უნდა გამოიტანოს:
+"YouTube video started" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class SmartTV {
+            watchYouTube() {
+                this.#connectInternet()
+                this.#openYouTube()
+                this.#playVideo()
+
+        console.log("YouTube video started")
+    }
+
+    #connectInternet() {
+        console.log("Connecting to internet...")
+    }
+
+    #openYouTube() {
+        console.log("Opening YouTube...")
+    }
+
+    #playVideo() {
+        console.log("Playing video...")
+    }
+}
+
+    const tv = new SmartTV()
+
+    tv.watchYouTube()
+    </script>
+</body>
+</html>

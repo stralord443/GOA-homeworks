@@ -1,0 +1,98 @@
+<!-- 2.შექმენი თამაში სადაც ღილაკზე დაჭერის შემდეგ ეკრანზე ჩნდება სხვადასხვა ადგილას წრე, კვადრატი,
+სამკუთხედი მონაცვლეობით, მომხმარებელმა უნდა დააჭიროს რაც შეიძლება სწრაფად ნებისმიერ ობიექტს,
+დააჭერის შემდეგ გამოიტანე საშუალო დრო -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen flex flex-col items-center justify-center bg-gray-100 overflow-hidden">
+
+    <h1 class="text-3xl font-bold mb-4">Shape Reaction Game</h1>
+
+    <button id="startBtn" class="px-6 py-3 bg-blue-500 text-white rounded-xl mb-6 hover:bg-blue-600">Start</button>
+
+    <div id="gameArea" class="relative w-full h-full"></div>
+
+    <p id="result" class="absolute bottom-10 text-lg font-semibold"></p>
+
+<script>
+    const startBtn = document.getElementById("startBtn")
+    const gameArea = document.getElementById("gameArea")
+    const result = document.getElementById("result")
+
+    let startTime
+    let times = []
+    let rounds = 5
+    let currentRound = 0
+
+    function createShape() {
+        const shape = document.createElement("div")
+
+        let size = Math.random() * 100 + 50; // 50–150px
+        let x = Math.random() * (window.innerWidth - size)
+        let y = Math.random() * (window.innerHeight - size)
+
+        shape.style.width = size + "px"
+        shape.style.height = size + "px"
+        shape.style.position = "absolute"
+        shape.style.left = x + "px"
+        shape.style.top = y + "px"
+
+        // random color
+        shape.style.backgroundColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+        let type = currentRound % 3;
+
+        if (type === 0) {
+            shape.style.borderRadius = "50%"
+        } else if (type === 1) {
+        } else {
+        // triangle
+        shape.style.width = "0"
+        shape.style.height = "0"
+        shape.style.backgroundColor = "transparent"
+        shape.style.borderLeft = size/2 + "px solid transparent"
+        shape.style.borderRight = size/2 + "px solid transparent"
+        shape.style.borderBottom = size + "px solid red"
+    }
+
+    gameArea.appendChild(shape)
+
+    startTime = new Date()
+
+    shape.addEventListener("click", () => {
+        let reaction = (new Date() - startTime) / 1000;
+        times.push(reaction)
+
+        shape.remove()
+        currentRound++
+
+        if (currentRound < rounds) {
+            setTimeout(createShape, Math.random()*1000 + 500)
+        } else {
+            showResult()
+        }
+    })
+}
+
+    function showResult() {
+        let sum = times.reduce((a, b) => a + b, 0)
+        let avg = sum / times.length
+
+        result.textContent = "საშუალო დრო: " + avg.toFixed(3) + " წამი"
+    }
+
+    startBtn.addEventListener("click", () => {
+        result.textContent = ""
+        times = []
+        currentRound = 0
+        createShape()
+    })
+</script>
+</body>
+</html>

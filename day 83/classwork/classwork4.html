@@ -1,0 +1,26 @@
+<!-- 5) მოცემულია ტექსტი. დაწერეთ პროგრამა, რომელიც დაითვლის რამდენი სიტყვა
+ მთავრდება თანხმოვანი ასოთი (ინგლისურად ნებისმიერი თანხმოვანი ან ქართულად
+  ნებისმიერი თანხმოვანი). ამოცანა შეასრულეთ reduce მეთოდის გამოყენებით. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let text = "Orange grey მწვანე ანანასი Car"
+
+        let wovels = ["a","e","i","o","u","ა","ე","ი","ო","უ"]
+
+        let project = text.split(" ").reduce((acc,curr)=>{
+            return wovels.includes(curr[0].toLowerCase()) ? acc + 1 : acc
+        }, 0)
+
+        console.log(project)
+    </script>
+</body>
+</html>

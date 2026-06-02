@@ -1,0 +1,20 @@
+<!-- 5) შექმენი დიდი სათაური.
+მისი ზომა უნდა იცვლებოდეს ეკრანის ზომის მიხედვით.
+გამოიყენე clamp(min, preferred, max) ისე რომ:
+პატარა ეკრანზე იყოს პატარა
+დიდ ეკრანზე იყოს დიდი
+შუაში იყოს ადაპტური. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <h1 class="font-bold text-center text-[clamp(1.5rem,5vw,4rem)]">Responsive Heading</h1>
+</body>  
+</body>
+</html>

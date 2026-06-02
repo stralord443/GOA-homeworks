@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 7) მოცემულია რიცხვების მასივი. დაწერეთ პროგრამა, რომელიც დაითვლის 
+    რამდენი რიცხვია 0-დან 50-მდე, რამდენი 51-დან 100-მდე და რამდენი 100-ზე მეტია.
+    ამოცანა შეასრულეთ forEach მეთოდის გამოყენებით. -->
+
+    <script>
+        let numbers = [12, 55, 3, 78, 101, 49, 100, 150, 0, 67]
+
+        let list = {
+            low:0,
+            medium:0,
+            high:0
+        }
+
+        let each = numbers.forEach(num =>{
+            if  (num <=50){
+                list.low ++
+            }else if (num <=100){
+                list.medium++
+            }else{
+                list.high++
+            }
+        })
+        console.log(list)
+    </script>
+</body>
+</html>

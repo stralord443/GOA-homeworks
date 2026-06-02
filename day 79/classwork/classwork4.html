@@ -1,0 +1,47 @@
+<!-- 5) შექმენი div ბლოკი და ::before-ით დაუმატე ფონზე ნახევრად გამჭვირვალე ფენა. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .box {
+        position: relative;
+        width: 300px;
+        height: 180px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFYqoKTu_o3Zns2yExbst2Co84Gpc2Q1RJbA&s");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 20px;
+        box-sizing: border-box;
+        opacity: 0.5;
+    }
+
+    .box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+    .box-content {
+        position: relative;
+        z-index: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box-content">
+            overlay
+        </div>
+    </div>
+</body>
+</html>

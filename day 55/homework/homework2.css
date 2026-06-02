@@ -1,0 +1,28 @@
+/* 5) შექმენით 2 სვეტიანი გრიდი.
+შიგნით მოათავსეთ ტექსტით ყუთები.
+გამოიყენეთ justify-items რომ ტექსტი ჰორიზონტალურად დადგეს. */
+
+.container{
+    background-color: lightcoral;
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    grid-template-rows: repeat(3,100px);
+    gap: 5px;
+    justify-content: center;
+}
+.div1{
+    background-color: aquamarine;
+    justify-items: center;
+}
+
+/* 6) ასევე ახსენით თითოეული: Start end center space-between space-around space-ev enly strech justify-item align-items */
+
+/* start will place all items at the start(above)
+end will place all items at the end(below)
+center will center all items(leave space above and below items)
+space-between will place items so that there will be space between items
+space-around will place items so that where will be space around items
+space-evenly will place items so that there will be equal space around them
+strech will expandd items to fill all available space
+justify-item will sotr items horizontaly
+align-items will sort items verticaly */

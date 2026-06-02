@@ -1,0 +1,45 @@
+<!-- 4) შექმენი კლასი Laptop, რომელსაც ექნება public მეთოდი turnOff().
+ამ მეთოდის გამოძახებისას უნდა გაეშვას private მეთოდები:
+#closePrograms()
+#saveFiles()
+#shutdown()
+საბოლოოდ კონსოლში უნდა გამოიტანოს:
+"Laptop turned off" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Laptop {
+            turnOff() {
+                this.#closePrograms()
+                this.#saveFiles()
+                this.#shutdown()
+
+        console.log("Laptop turned off")
+    }
+
+    #closePrograms() {
+        console.log("Closing programs...")
+    } 
+
+    #saveFiles() {
+        console.log("Saving files...")
+    }
+
+    #shutdown() {
+        console.log("Shutting down...")
+    }
+}
+
+    const myLaptop = new Laptop()
+
+    myLaptop.turnOff()
+    </script>
+</body>
+</html>

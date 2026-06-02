@@ -1,0 +1,56 @@
+3) შექმენი Student კლასი.
+ქონდეს:
+- score
+
+setter ამოწმებდეს, რომ ქულა იყოს 0-დან 100-მდე.
+getter აბრუნებდეს:
+- "Failed" თუ ქულა < 50
+- "Passed" თუ ქულა >= 50
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 3) შექმენი Student კლასი.
+// ქონდეს:
+// - score
+
+// setter ამოწმებდეს, რომ ქულა იყოს 0-დან 100-მდე.
+// getter აბრუნებდეს:
+// - "Failed" თუ ქულა < 50
+// - "Passed" თუ ქულა >= 50
+
+        class Student {
+            constructor(score) {
+                this.score = score
+        }
+
+    set score(value) {
+        if (value >= 0 && value <= 100) {
+            this._score = value
+        } else {
+        console.log("ქულა უნდა იყოს 0-დან 100-მდე")
+        }   
+    }
+
+    get score() {
+        if (this._score < 50) {
+            return "Failed"
+        } else {
+            return "Passed"
+        }
+    }
+}
+
+    const student1 = new Student(40)
+    console.log(student1.score)
+
+    const student2 = new Student(85)
+    console.log(student2.score)
+    </script>
+</body>
+</html>

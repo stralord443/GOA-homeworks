@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 4) შექმენი კლასი InstagramAccount, რომელსაც ექნება public მეთოდი createPost().
+// ამ მეთოდის გამოძახებისას უნდა გაეშვას private მეთოდები:
+// #checkInternet()
+// #uploadPhoto()
+// #writeCaption()
+
+// საბოლოოდ კონსოლში უნდა გამოიტანოს:
+// "Post uploaded successfully"
+
+    class InstagramAccount {
+        createPost() {
+            this.#checkInternet()
+            this.#uploadPhoto()
+            this.#writeCaption()
+
+        console.log("Post uploaded successfully")
+    }
+
+    #checkInternet() {
+        console.log("Internet connection checked")
+    }
+
+    #uploadPhoto() {
+        console.log("Photo uploaded")
+    }
+
+    #writeCaption() {
+        console.log("Caption written")
+    }
+}
+
+    const account = new InstagramAccount()
+
+    account.createPost()
+    </script>
+</body>
+</html>

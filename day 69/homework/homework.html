@@ -1,0 +1,24 @@
+<!-- 1.დაწერე JavaScript კოდი, რომელიც მუშაობს DOM-თან. შექმენი ერთი მთავარი div id-ს სახელით 
+mainBox და წაართვი ის JavaScript-ში getElementById-ით. შეცვალე მისი სიგანე და სიმაღლე, დაამატე linear 
+gradient ფონი, border-radius, padding, box-shadow და transition -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="mainbox">1</div>
+
+    <script>
+        document.getElementById("mainbox").style.height="100px"
+        document.getElementById("mainbox").style.width="100px"
+        document.getElementById("mainbox").style.backgroundImage="linear-gradient(to top, red, yellow)"
+        document.getElementById("mainbox").style.borderRadius="5px"
+        document.getElementById("mainbox").style.padding="20px"
+        document.getElementById("mainbox").style.boxShadow="7px 8px black"
+    </script>
+</body>
+</html>
